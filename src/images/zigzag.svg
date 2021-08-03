@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 <svg width="409" height="601" viewBox="0 0 409 601" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M9 42L113.128 143.667L51.2699 226.07L171.894 325.596L84.2611 455.088L257.465 591" stroke="white" stroke-opacity="0.29" stroke-width="25"/>
 <path d="M162.434 10L262.414 105L203.02 182L318.838 275L234.697 396L401 523" stroke="white" stroke-opacity="0.29" stroke-width="25"/>
 </svg>
-=======
-<svg xmlns="http://www.w3.org/2000/svg" width="409" height="601" fill="none" viewBox="0 0 409 601"><path stroke="#fff" stroke-opacity=".29" stroke-width="25" d="M9 42L113.128 143.667L51.2699 226.07L171.894 325.596L84.2611 455.088L257.465 591"/><path stroke="#fff" stroke-opacity=".29" stroke-width="25" d="M162.434 10L262.414 105L203.02 182L318.838 275L234.697 396L401 523"/></svg>
->>>>>>> 72a1945abf6ec2bf2307e0be0231530bb0cda5d9
