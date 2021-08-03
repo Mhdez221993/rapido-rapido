@@ -1,0 +1,183 @@
+.l-modal {
+  position: absolute;
+  width: 100%;
+  font-family: "Sansita", sans-serif;
+  height: 70vh;
+  bottom: 0%;
+  z-index: 5;
+  display: grid;
+  padding-bottom: 3%;
+  grid-template-rows: 10% 40% 30% 20%;
+
+  .l-modal-background {
+    position: absolute;
+    bottom: 0%;
+  }
+
+  .l-modal-title {
+    color: $color-white;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+  }
+
+  .modal-list {
+    display: grid;
+    position: relative;
+
+    .modal-list-item {
+      border: 2px dashed black;
+      background-color: white;
+      color: black;
+      display: flex;
+      width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 5%;
+      align-items: center;
+      justify-content: space-evenly;
+    }
+
+    .list-item-comment {
+      display: grid;
+      padding: 5%;
+    }
+
+    .comment-text {
+      line-height: 20px;
+    }
+  }
+
+  .new {
+    position: relative;
+    background-color: white;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid black;
+    display: grid;
+    justify-content: center;
+
+    .new-title {
+      align-self: center;
+      text-align: center;
+    }
+  }
+
+  .buttons {
+    grid-row-start: 4;
+    display: grid;
+    position: relative;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+
+    .btn-1 {
+      align-self: center;
+      color: $color-white;
+      height: 32px;
+      border-radius: 20px;
+      background-color: $color-purple-bright;
+      font-size: 18px;
+    }
+  }
+
+  /* Properties of Comments Layout  */
+
+
+  .green-background {
+    background-color: $color-green-light !important;
+  }
+
+  /* Properties of New Comment Layout  */
+  textarea {
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 5%;
+    height: 45vh;
+    width: 90%;
+    font-family: "Sansita", sans-serif;
+    font-size: 18px;
+    border: 2px dashed black;
+    background-color: white;
+    color: black;
+  }
+
+  @media only screen and (min-width: 1200px) {
+    height: 90%;
+    width: 60%;
+    background-color: $color-purple-light;
+    border: 3px solid $color-purple-dark;
+    margin: 2.5%;
+    margin-left: 20%;
+    margin-right: 20%;
+    border-radius: 22px;
+    grid-template-rows: 15% 50% 30% 10%;
+
+    .modal-list {
+      input {
+        border-radius: 6px;
+        font-size: 16px;
+        padding-left: 2%;
+        height: 50px;
+        margin-top: 5%;
+        width: 40%;
+        margin-left: auto;
+        margin-right: auto;
+        border: 3px solid $color-purple-dark;
+      }
+
+      .modal-list-item {
+        border-color: $color-green-dark;
+        width: 50%;
+        min-height: 100px;
+        padding: 16px;
+      }
+    }
+
+    .l-modal-background {
+      display: none;
+    }
+
+    .l-modal-title {
+      margin-top: 5%;
+    }
+
+    .buttons {
+      grid-template-columns: auto auto;
+
+      .btn-1 {
+        width: 300px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+
+    .new {
+      width: 50%;
+      border-radius: 6px;
+      border: 3px solid $color-green-dark;
+      background-color: #ffffff8a;
+
+      .new-title {
+        color: $color-white;
+        font-size: 22px;
+      }
+
+      .new-input {
+        .new-reservation-input {
+          padding: 3%;
+          border-radius: 6px;
+          border: 3px solid $color-green-dark;
+        }
+      }
+    }
+  }
+}
+
+.l-modal-reservations {
+  @media only screen and (min-width: 1200px) {
+    background-color: $color-green-light;
+    border: 3px solid $color-green-dark;
+  }
+}

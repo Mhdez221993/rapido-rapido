@@ -1,0 +1,258 @@
+/**
+* landing.scss
+*
+*
+ Layout Landing  */
+.l-landing {
+  font-family: "Skranji", cursive;
+  background-color: $color-yellow;
+  height: 100vh;
+  position: relative;
+  display: grid;
+
+  .l-landing-hero {
+    grid-row-start: 1;
+    padding-top: 10%;
+    height: 30vh;
+
+    &__title-1 {
+      color: $color-green-bright;
+      font-size: 64px;
+      margin-left: 5px;
+      padding-top: 18px;
+    }
+
+    &__title-2 {
+      color: $color-purple-bright;
+      font-size: 64px;
+      margin-left: 30%;
+      padding-top: 24px;
+    }
+
+    &__subtitle {
+      padding-top: 36px;
+      font-size: 24px;
+      text-align: center;
+      -webkit-text-fill-color: $color-white;
+      -webkit-text-stroke-width: 1px;
+      -webkit-text-stroke-color: black;
+    }
+
+    &__main {
+      position: relative;
+      width: 100%;
+      display: grid;
+      grid-row-start: 2;
+
+      .img-burger {
+        display: block;
+      }
+
+      .shadow-burger {
+        display: block;
+        transform: translate(60%, -200%);
+      }
+
+      .img-drink {
+        display: none;
+      }
+
+      .shadow-drink {
+        display: none;
+      }
+
+      .img-doughnut {
+        display: none;
+      }
+
+      .shadow-doughnut {
+        display: none;
+      }
+
+      .img-fries {
+        display: none;
+      }
+
+      .shadow-fries {
+        display: none;
+      }
+
+      .img-hotdog {
+        display: none;
+      }
+
+      .shadow-hotdog {
+        display: none;
+      }
+
+      .img-pizza {
+        display: none;
+      }
+
+      .shadow-pizza {
+        display: none;
+      }
+
+      .l-landing-hero-main__image {
+        width: 100%;
+        transform: scale(1.4);
+        z-index: 1;
+      }
+
+      .l-landing-hero-main__image-shadow {
+        width: 33%;
+        margin-left: auto;
+        margin-right: auto;
+        transform: translateY(-40px) scale(1.8);
+      }
+    }
+
+    &__action {
+      display: grid;
+      grid-template-columns: auto auto;
+      grid-row-start: 3;
+      position: absolute;
+      bottom: 0%;
+      height: 100px;
+      width: 100%;
+      justify-content: center;
+
+      .landing-text {
+        font-family: "Slackey", sans-serif;
+        font-size: 48px;
+        color: $color-red-bright;
+      }
+
+      .landing-image {
+        transform: rotate(-90deg);
+      }
+    }
+  }
+
+  @media only screen and (min-width: 1200px) {
+    grid-template-rows: auto auto auto;
+
+    .l-landing-hero {
+      padding-top: unset;
+
+      &__title-1 {
+        font-size: 124px;
+        margin-left: 23%;
+        padding-top: 5%;
+      }
+
+      &__title-2 {
+        padding-top: 4%;
+        margin-left: 45%;
+        font-size: 124px;
+      }
+
+      &__subtitle {
+        padding-top: 3%;
+        font-size: 32px;
+      }
+    }
+
+    .l-landing-hero__main {
+      grid-row-start: 2;
+
+      &--image {
+        position: absolute;
+        width: 400px;
+      }
+
+      &--shadow {
+        position: absolute;
+        width: 200px;
+      }
+
+      .img-drink {
+        display: block;
+        top: -50%;
+        left: -5%;
+      }
+
+      .shadow-drink {
+        display: block;
+        top: 100%;
+        left: -2%;
+      }
+
+      .img-doughnut {
+        display: block;
+        top: -35%;
+        left: 15%;
+      }
+
+      .shadow-doughnut {
+        display: block;
+        top: 125%;
+        left: 19%;
+      }
+
+      .img-fries {
+        display: block;
+        top: -50%;
+        left: 30%;
+      }
+
+      .shadow-fries {
+        display: block;
+        top: 95%;
+        left: 35%;
+        transform: scale(0.6);
+      }
+
+      .img-burger {
+        display: block;
+        left: 45%;
+      }
+
+      .shadow-burger {
+        display: block;
+        top: 120%;
+        left: 50%;
+      }
+
+      .img-hotdog {
+        display: block;
+        top: -50%;
+        left: 65%;
+      }
+
+      .shadow-hotdog {
+        display: block;
+        top: 120%;
+        left: 72%;
+      }
+
+      .img-pizza {
+        display: block;
+        top: -50%;
+        left: 83%;
+      }
+
+      .shadow-pizza {
+        display: block;
+        top: 100%;
+        left: 88%;
+        transform: scale(0.7);
+      }
+    }
+
+    .l-landing-hero__action {
+      height: 100px;
+      justify-content: end;
+      right: 10%;
+
+      .landing-text {
+        font-size: 64px;
+      }
+
+      .landing-image {
+        transform: rotate(-90deg) scale(1.8);
+        margin-left: 50px;
+      }
+    }
+  }
+}
