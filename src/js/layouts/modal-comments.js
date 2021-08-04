@@ -1,8 +1,5 @@
-import modal from '../../images/modalPurple.svg';
-
 const modalCommentsLayout = (item) => {
   let template = `<section id="modal-comments" class="l-modal">
-        <img class="l-modal-background" src="${modal}" alt="main-image" />
         <h3 class="l-modal-title">Comments</h3>
         <section class="modal-list">
         </section>        
@@ -14,17 +11,16 @@ const modalCommentsLayout = (item) => {
 
   if (item.comments.length > 0) {
     template = `<section id="modal-comments" class="l-modal">
-        <img class="l-modal-background" src="${modal}" alt="main-image" />
         <h3 class="l-modal-title">Comments</h3>
         <section class="modal-list">
         ${item.comments.map((i) => {
-    const comment = `<div class="modal-list-item  list-item-comment">
+          const comment = `<div class="modal-list-item  list-item-comment">
             <h5>${i.username}</h5>
             <h5 class="comment-date">${i.date}</h5>
             <h5 class="comment-text">${i.comment}</h5>
           </div>;`;
-    return comment;
-  })}
+          return comment;
+        })}
         </section>        
         <section class="buttons">
           <button id="btn-new" class="btn-1 green-background">New Comment</button>

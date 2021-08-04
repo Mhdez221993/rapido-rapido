@@ -66,6 +66,8 @@ function fetchReservations(item) {
 }
 
 function displayCommentNew(item) {
+  const commentsModal = document.getElementById("modal-comments");
+  commentsModal.style.visibility = "hidden";
   main.insertAdjacentHTML("beforeend", modalCommentNewLayout);
   const submitBtn = document.getElementById("btn-new-submit");
   const cancelBtn = document.getElementById("btn-new-cancel");
@@ -91,6 +93,7 @@ function displayCommentNew(item) {
   cancelBtn.addEventListener("click", () => {
     const modal = document.getElementById("modal-comments-new");
     main.removeChild(modal);
+    commentsModal.style.visibility = "visible";
   });
 }
 
@@ -151,8 +154,12 @@ function displayItem(item) {
 
   closeBtn.addEventListener("click", () => {
     const itemSection = document.getElementById("item");
+    const modals = document.getElementsByClassName("l-modal");
     const main = document.getElementById("main");
     main.removeChild(itemSection);
+    Array.from(modals).forEach((item) => {
+      main.removeChild(item);
+    });
     menu.style.display = "block";
   });
 }
@@ -173,7 +180,7 @@ function displayMenu(menu) {
 
     starBtn.addEventListener("click", () => {
       const count = addStar(menu[index]);
-      const starsCount = document.getElementById("stars-count");
+      const starsCount = document.getElementById(`stars-count-${item.id}`);
       starsCount.innerText = count;
     });
 

@@ -2,8 +2,9 @@
   position: absolute;
   width: 100%;
   font-family: "Sansita", sans-serif;
-  height: 70vh;
-  bottom: 0%;
+  bottom: -100vh;
+  height: max-content;
+  padding: 5%;
   z-index: 5;
   display: grid;
   padding-bottom: 3%;

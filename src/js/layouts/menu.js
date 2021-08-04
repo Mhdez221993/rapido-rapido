@@ -28,8 +28,8 @@ const menuLayout = (menu) => {
                                (element) => `<div class="l-menu-main-group">
                                <div id=${element[0].name} class="l-menu-main-item item-left">
                                  <div class="l-menu-main-item__stars">
-                                  <img id="btn-star-${element[0].name}" class="stars-img" src=${starTinyEmpty} alt="stars" />
-                                  <h6 id="stars-count" class="stars-count">${element[0].stars}</h6>
+                                  <img id="btn-star-${element[0].name}" class="stars-img" src=${starTinyFull} alt="stars" />
+                                  <h6 id=stars-count-${element[0].name} class="stars-count">${element[0].stars}</h6>
                                  </div>
                                  <img
                                    src=${element[0].image}
@@ -60,7 +60,7 @@ const menuLayout = (menu) => {
                                <div id=${element[1].name} class="l-menu-main-item item-right">
                                <div class="l-menu-main-item__stars">
                                   <img id="btn-star-${element[1].name}" class="stars-img" src=${starTinyEmpty} alt="stars" />
-                                  <h6 id="stars-count" class="stars-count">${element[1].stars}</h6>
+                                  <h6 id=stars-count-${element[1].name} class="stars-count">${element[1].stars}</h6>
                                  </div>                               
                                  <img
                                    src=${element[1].image}
