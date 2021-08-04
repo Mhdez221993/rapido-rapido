@@ -33,6 +33,8 @@
       color: black;
       display: flex;
       width: 90%;
+      height: max-content;
+      padding: 5%;
       margin-left: auto;
       margin-right: auto;
       margin-bottom: 5%;
@@ -47,6 +49,14 @@
 
     .comment-text {
       line-height: 20px;
+    }
+
+    .comment-new-name {
+      width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 5%;
+      padding: 5%;
     }
   }
 
