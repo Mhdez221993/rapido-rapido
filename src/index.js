@@ -1,1 +1,1 @@
-import "./js/dom-calls.js";
+import './js/dom-calls.js';
