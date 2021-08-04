@@ -24,7 +24,7 @@
     display: grid;
     grid-row-start: 1;
     color: $color-red-dark;
-    font-family: "Skranji", cursive;
+    font-family: 'Skranji', cursive;
     padding-top: 15%;
     height: 25vh;
 
@@ -32,7 +32,7 @@
       align-self: center;
       font-size: 58px;
       text-align: center;
-      letter-spacing: 0px;
+      letter-spacing: 0;
       text-transform: capitalize;
       z-index: 1;
     }
@@ -94,7 +94,7 @@
         margin-left: auto;
         margin-right: auto;
         margin-top: 5%;
-        font-family: "Sansita", sans-serif;
+        font-family: 'Sansita', sans-serif;
         font-size: 18px;
         font-weight: 700;
       }
@@ -103,7 +103,7 @@
 
   &__ingredients {
     display: grid;
-    font-family: "Sansita", sans-serif;
+    font-family: 'Sansita', sans-serif;
     font-size: 24px;
     text-align: center;
     grid-row-start: 3;
@@ -152,7 +152,20 @@
     }
   }
 
-  @media only screen and (min-width: 1200px) {
+  @media screen and (max-width: 992px) {
+    .l-item-detail-main-image-shape img {
+      width: 200px;
+      background-color: red;
+    }
+
+    .l-item-detail__footbar {
+      .footbar-background {
+        width: 100%;
+      }
+    }
+  }
+
+  @media only screen and (min-width: 992px) {
     border: 3px solid $color-golden;
     border-radius: 18px;
     margin: 5%;

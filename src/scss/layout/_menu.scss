@@ -3,7 +3,7 @@
   height: 100vh;
 
   .l-menu-hero {
-    font-family: "Skranji", cursive;
+    font-family: 'Skranji', cursive;
     background-color: $color-yellow;
     grid-row-start: 1;
     padding-top: 10%;
@@ -101,7 +101,7 @@
           top: 130px;
           left: 40px;
           width: 80px;
-          font-family: "Sansita", sans-serif;
+          font-family: 'Sansita', sans-serif;
           font-size: 24px;
           z-index: 3;
         }
@@ -143,10 +143,11 @@
     }
   }
 
-  @media only screen and (min-width: 1200px) {  
-      display: block ;
-  
+  @media screen and (max-width: 992px) {
+    
+  }
 
+  @media only screen and (min-width: 992px) {
     .l-menu-hero {
       padding-top: unset;
       height: unset;
@@ -261,4 +262,3 @@
     }
   }
 }
-
