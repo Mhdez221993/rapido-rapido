@@ -1,7 +1,3 @@
-import shadow from '../../images/shadowTr.png';
-import itemShape from '../../images/item-shape.svg';
-import itemShapeBackground from '../../images/item-shape-background.svg';
-
 const menuLayout = (menu) => {
   const menuPairs = menu.reduce((result, value, index, array) => {
     if (index % 2 === 0) result.push(array.slice(index, index + 2));
@@ -20,23 +16,23 @@ const menuLayout = (menu) => {
     (element) => `<div class="l-menu-main-group">
                                <div class="l-menu-main-item item-left">
                                  <img
-                                   src=${element[0].image}
+                                   src="./"
                                    alt="burger"
                                    class="l-menu-main-item-img img-left"
                                  />
                                  <img
-                                   src=${shadow}
+                                   src="./"
                                    alt="shadow"
                                    class="l-menu-main-item-shadow shadow-left"
                                  />
                                  <img
                                    id="burger"
-                                   src=${itemShape}
+                                   src="./"
                                    alt="item-shape"
                                    class="l-menu-main-item-shape shape-left"
                                  />
                                  <img
-                                   src=${itemShapeBackground}
+                                   src="./"
                                    alt="item-shape-background"
                                    class="l-menu-main-item-shape-background background-left"
                                  />
@@ -45,28 +41,31 @@ const menuLayout = (menu) => {
                                </div>
                                <div class="l-menu-main-item item-right">
                                  <img
-                                   src=${element[1].image}
+                                   src="./"
                                    alt="tacos"
                                    class="l-menu-main-item-img img-right"
                                  />
                                  <img
-                                   src=${shadow}
+                                   src="./"
                                    alt="shadow"
                                    class="l-menu-main-item-shadow shadow-right"
                                  />
                                  <img
                                    id="tacos"
-                                   src=${itemShape}
+                                   src="./"
                                    alt="item-shape"
                                    class="l-menu-main-item-shape shape-right"
                                  />
                                  <img
-                                   src=${itemShapeBackground}
+                                   src="./"
                                    alt="item-shape"
                                    class="l-menu-main-item-shape-background background-right"
                                  />
 
                                  <h6 class="l-menu-main-item-text">${element[1].name}</h6>
+                                       <img id="btn-comments" class="footbar-comments" src="./" alt="comments-button" />
+          <img id="btn-star" class="footbar-star" src="./" alt="star-button" />
+          <img id="btn-reserve" class="footbar-reserve" src="./" alt="reserve-button" />
                                </div>
                              </div>`,
   )}

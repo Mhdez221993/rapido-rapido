@@ -6,11 +6,10 @@
 
 class Api {
   constructor() {
-    this.fetchUrl = "https://microverse.abi.api.waldenberginc.com/api";
-    this.postUrl =
-      "https://guarded-basin-44458.herokuapp.com/https://us-central1-involvement-api.cloudfunctions.net/capstoneApi";
+    this.fetchUrl = 'https://microverse.abi.api.waldenberginc.com/api';
+    this.postUrl = 'https://guarded-basin-44458.herokuapp.com/https://us-central1-involvement-api.cloudfunctions.net/capstoneApi';
     this.menu = [];
-    this.appId = "9hvvjEsfhlPhvERRXvIH";
+    this.appId = '9hvvjEsfhlPhvERRXvIH';
   }
 
   /**         Obtains the record of scores from the API          */
@@ -26,7 +25,7 @@ class Api {
 
   async getLikes() {
     const response = await fetch(
-      `${this.postUrl}/apps/${this.appId}/likes`
+      `${this.postUrl}/apps/${this.appId}/likes`,
     ).then((response) => response.text());
     return JSON.parse(response);
   }
@@ -34,11 +33,11 @@ class Api {
   async postLikes(item) {
     const str = JSON.stringify(item);
     const response = await fetch(`${this.postUrl}/apps/${this.appId}/likes`, {
-      mode: "cors",
-      method: "POST",
+      mode: 'cors',
+      method: 'POST',
       headers: {
-        "Content-type": "Application/json",
-        "Access-Control-Allow-Origin": "*",
+        'Content-type': 'Application/json',
+        'Access-Control-Allow-Origin': '*',
       },
       body: str,
     }).then((response) => response.text());
@@ -48,7 +47,7 @@ class Api {
 
   async getComments(item) {
     const response = await fetch(
-      `${this.postUrl}/apps/${this.appId}/comments?item_id=${item}`
+      `${this.postUrl}/apps/${this.appId}/comments?item_id=${item}`,
     ).then((response) => response.text());
     return response;
   }
@@ -58,14 +57,14 @@ class Api {
     const response = await fetch(
       `${this.postUrl}/apps/${this.appId}/comments`,
       {
-        mode: "cors",
-        method: "POST",
+        mode: 'cors',
+        method: 'POST',
         headers: {
-          "Content-type": "Application/json",
-          "Access-Control-Allow-Origin": "*",
+          'Content-type': 'Application/json',
+          'Access-Control-Allow-Origin': '*',
         },
         body: str,
-      }
+      },
     ).then((response) => response.text());
 
     return response;
@@ -73,7 +72,7 @@ class Api {
 
   async getReservations(item) {
     const response = await fetch(
-      `${this.postUrl}/apps/${this.appId}/reservations?item_id=${item}`
+      `${this.postUrl}/apps/${this.appId}/reservations?item_id=${item}`,
     ).then((response) => response.text());
     return response;
   }
@@ -83,14 +82,14 @@ class Api {
     const response = await fetch(
       `${this.postUrl}/apps/${this.appId}/reservations/`,
       {
-        mode: "cors",
-        method: "POST",
+        mode: 'cors',
+        method: 'POST',
         headers: {
-          "Content-type": "Application/json",
-          "Access-Control-Allow-Origin": "*",
+          'Content-type': 'Application/json',
+          'Access-Control-Allow-Origin': '*',
         },
         body: str,
-      }
+      },
     ).then((response) => response.text());
 
     return response;

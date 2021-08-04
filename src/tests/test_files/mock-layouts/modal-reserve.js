@@ -1,8 +1,6 @@
-import modal from '../../images/modal.svg';
-
 const modalReserveLayout = (item) => {
   let template = `<section id="modal-reserve" class="l-modal">
-        <img class="l-modal-background" src="${modal}" alt="main-image" />
+        <img class="l-modal-background" src="./" alt="main-image" />
         <h3 class="l-modal-title">Reservations</h3>
         <section class="modal-list">
         </section>
@@ -26,7 +24,7 @@ const modalReserveLayout = (item) => {
 
   if (item.reservations) {
     template = `<section id="modal-reserve" class="l-modal">
-        <img class="l-modal-background" src="${modal}" alt="main-image" />
+        <img class="l-modal-background" src="./" alt="main-image" />
         <h3 class="l-modal-title">Reservations</h3>
         <section class="modal-list">
 
