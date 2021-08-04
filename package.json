@@ -11,7 +11,8 @@
     ]
   },
   "scripts": {
-    "test": "jest --watchAll",
+    "test": "jest",
+    "jest": "jest --watchAll * .js",
     "start": "webpack serve --open",
     "server": "node server.js",
     "build": "webpack",
@@ -64,6 +65,7 @@
     "jsdom": "^16.6.0",
     "local-cors-proxy": "^1.1.0",
     "lodash": "^4.17.21",
+    "node-fetch": "^2.6.1",
     "node-sass": "^6.0.1",
     "regenerator-runtime": "^0.13.9",
     "style-loader": "^3.0.0"

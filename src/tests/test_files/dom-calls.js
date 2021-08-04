@@ -193,9 +193,9 @@ function init() {
 
 function testStart() {
   api.refresh().then((response) => {
-    window.menu = response;
+    window.menu = JSON.parse(response);
     api.getLikes().then((response) => {
-      window.likes = response;
+      window.likes = JSON.parse(response);
       if (window.likes.length > 0) {
         window.likes.forEach((item) => {
           window.menu.forEach((i, index) => {

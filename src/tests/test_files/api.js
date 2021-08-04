@@ -3,14 +3,14 @@
 /**          GET - https://microverse.abi.api.waldenberginc.com/api/read.php Fetch ALL Records
              GET - https://microverse.abi.api.waldenberginc.com/api/single_read.php/?id=2 Fetch Single Record
 */
-import 'whatwg-fetch';
-
 import {
   abiApiResponse,
   microverseApiComments,
   microverseApiLikes,
   microverseApiReservations,
 } from './testConstants.js';
+
+global.fetch = require('node-fetch');
 
 class Api {
   constructor() {
@@ -23,28 +23,17 @@ class Api {
 
   /**         Obtains the record of scores from the API          */
   async refresh() {
-    this.promise = Promise.resolve(abiApiResponse);
+    this.promise = Promise.resolve(JSON.stringify(abiApiResponse));
     return this.promise;
   }
 
   async getLikes() {
-    this.promise = Promise.resolve(microverseApiLikes);
+    this.promise = Promise.resolve(JSON.stringify(microverseApiLikes));
     return this.promise;
   }
 
-  async postLikes(item) {
-    const str = JSON.stringify(item);
-    const response = await fetch(`${this.postUrl}/apps/${this.appId}/likes`, {
-      mode: 'cors',
-      method: 'POST',
-      headers: {
-        'Content-type': 'Application/json',
-        'Access-Control-Allow-Origin': '*',
-      },
-      body: str,
-    }).then((response) => response.text());
-
-    return response;
+  async postLikes() {
+    return this.true;
   }
 
   async getComments() {
@@ -52,22 +41,8 @@ class Api {
     return this.promise;
   }
 
-  async postComment(item) {
-    const str = JSON.stringify(item);
-    const response = await fetch(
-      `${this.postUrl}/apps/${this.appId}/comments`,
-      {
-        mode: 'cors',
-        method: 'POST',
-        headers: {
-          'Content-type': 'Application/json',
-          'Access-Control-Allow-Origin': '*',
-        },
-        body: str,
-      },
-    ).then((response) => response.text());
-
-    return response;
+  async postComment() {
+    return this.true;
   }
 
   async getReservations() {
@@ -75,22 +50,8 @@ class Api {
     return this.promise;
   }
 
-  async postReservation(item) {
-    const str = JSON.stringify(item);
-    const response = await fetch(
-      `${this.postUrl}/apps/${this.appId}/reservations/`,
-      {
-        mode: 'cors',
-        method: 'POST',
-        headers: {
-          'Content-type': 'Application/json',
-          'Access-Control-Allow-Origin': '*',
-        },
-        body: str,
-      },
-    ).then((response) => response.text());
-
-    return response;
+  async postReservation() {
+    return this.true;
   }
 }
 
