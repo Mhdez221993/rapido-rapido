@@ -41,8 +41,6 @@
     "express": "^4.17.1",
     "hint": "^6.1.4",
     "html-webpack-plugin": "^5.3.2",
-    "jest-fetch-mock": "^3.0.3",
-    "miragejs": "^0.1.41",
     "sass": "^1.35.2",
     "sass-loader": "^12.1.0",
     "stylelint": "^13.13.1",
@@ -55,8 +53,7 @@
     "webpack-dev-server": "^3.11.2",
     "webpack-log": "^3.0.2",
     "webpack-manifest-plugin": "^3.1.1",
-    "webpack-nano": "^1.1.1",
-    "whatwg-fetch": "^3.6.2"
+    "webpack-nano": "^1.1.1"
   },
   "dependencies": {
     "axios": "^0.21.1",
