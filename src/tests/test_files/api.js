@@ -10,8 +10,6 @@ import {
   microverseApiReservations,
 } from './testConstants.js';
 
-global.fetch = require('node-fetch');
-
 class Api {
   constructor() {
     this.menu = [];
