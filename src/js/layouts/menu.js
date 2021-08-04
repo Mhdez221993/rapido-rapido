@@ -7,6 +7,9 @@ const menuLayout = (menu) => {
     if (index % 2 === 0) result.push(array.slice(index, index + 2));
     return result;
   }, []);
+  const newMenuPairs =  []
+  menu.flatMap(el => newMenuPairs.push(el))
+
 
   const menuSection = `<section id="menu" class="l-menu">
                        <header class="l-menu-hero">
@@ -16,61 +19,30 @@ const menuLayout = (menu) => {
                         </header>
                         <section class="l-menu-main">   
                                                
-                           ${menuPairs.map(
-    (element) => `<div class="l-menu-main-group">
-                               <div class="l-menu-main-item item-left">
+                          ${newMenuPairs.map( (element) => `
+                            <div class="l-menu-main-group">
                                  <img
-                                   src=${element[0].image}
-                                   alt="burger"
-                                   class="l-menu-main-item-img img-left"
-                                 />
+                                    src=${element.image} alt="burger" class="l-menu-main-item-img"
+                                  />
+                                  <img
+                                    src=${shadow} alt="shadow" class="l-menu-main-item-shadow shadow-left"
+                                  />
                                  <img
-                                   src=${shadow}
-                                   alt="shadow"
-                                   class="l-menu-main-item-shadow shadow-left"
+                                   id="burger" src=${itemShape} alt="item-shape" class="l-menu-main-item-shape"
                                  />
-                                 <img
-                                   id="burger"
-                                   src=${itemShape}
-                                   alt="item-shape"
-                                   class="l-menu-main-item-shape shape-left"
-                                 />
+                                 ${ /*
+
                                  <img
                                    src=${itemShapeBackground}
                                    alt="item-shape-background"
                                    class="l-menu-main-item-shape-background background-left"
                                  />
 
-                                 <h6 class="l-menu-main-item-text">${element[0].name}</h6>
-                               </div>
-                               <div class="l-menu-main-item item-right">
-                                 <img
-                                   src=${element[1].image}
-                                   alt="tacos"
-                                   class="l-menu-main-item-img img-right"
-                                 />
-                                 <img
-                                   src=${shadow}
-                                   alt="shadow"
-                                   class="l-menu-main-item-shadow shadow-right"
-                                 />
-                                 <img
-                                   id="tacos"
-                                   src=${itemShape}
-                                   alt="item-shape"
-                                   class="l-menu-main-item-shape shape-right"
-                                 />
-                                 <img
-                                   src=${itemShapeBackground}
-                                   alt="item-shape"
-                                   class="l-menu-main-item-shape-background background-right"
-                                 />
-                                 <h6 class="l-menu-main-item-text">${element[1].name}</h6>
-                               </div>
-                             </div>`,
-  )}
-                               
-                         </section>
+                                 <h6 class="l-menu-main-item-text">${element.name}</h6>
+                                 */''}
+                            </div>`
+                          ).join('')}
+                        </section>
                      </section>`;
   return menuSection;
 };
