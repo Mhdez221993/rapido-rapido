@@ -9,10 +9,16 @@ import {
   displayReserve,
 } from './test_files/dom-calls.js';
 
-testStart();
-
 describe('Counter functions ', () => {
   test('retrieves the likes from api and counts them', () => {
+    const itemsCountOld = 0;
+    testStart();
+    const itemsCount = window.menu.length;
+    expect(itemsCountOld).not.toBe(itemsCount);
+  });
+
+  test('retrieves the likes from api and counts them', () => {
+    testStart();
     const oldLikes = [];
     window.likes.forEach((l) => oldLikes.push(l));
     displayItem(window.menu[0]);
@@ -22,6 +28,7 @@ describe('Counter functions ', () => {
   });
 
   test('retrieves the comments from api and counts them', () => {
+    testStart();
     const oldComments = [];
     window.menu[0].comments.forEach((c) => oldComments.push(c));
     displayItem(window.menu[0]);
