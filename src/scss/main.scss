@@ -1,0 +1,119 @@
+/* -----------------------------------------------------------------------------------
+
+    Template Name: Portfolio
+    Description: This is a portfolio project. Built for Microverse.
+    Author: Abraham Rodriguez ( Abi )
+    Author URI: https://portfolio.waldenberginc.com
+
+-----------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+   Folder Architecture
+
+   1._style
+   |
+   |
+   |
+   |___1.1 abstract
+   |              |
+   |              |
+   |              |___1.1.1 boxes
+   |              |
+   |              |
+   |              |___1.1.2 variables
+   |
+   |
+   |___1.2 base
+   |           |
+   |           |
+   |           |___1.2.1 animations
+   |           |
+   |           |
+   |           |___1.2.2 images
+   |           |
+   |           |
+   |           |___1.2.3 typography
+   |
+   |
+   |___1.3 components
+   |                 |
+   |                 |
+   |                 |___1.3.1 buttons
+   |                 |
+   |                 |
+   |                 |___1.3.2 inputs
+   |
+   |
+   |___1.4 layout
+                 |
+                 |
+                 |___1.4.1 landing
+                 |
+                 |
+                 |___1.4.2 modal
+                 |
+                 |
+                 |___1.4.3 menu
+
+*/
+@import "abstract/boxes";
+@import "abstract/variables";
+@import "base/animations";
+@import "base/images";
+@import "base/typography";
+@import "components/buttons";
+@import "components/inputs";
+@import "layout/item-detail";
+@import "layout/landing";
+@import "layout/modal";
+@import "layout/menu";
+
+* {
+  box-sizing: border-box;
+}
+
+/*
+font-family: 'Sansita', sans-serif;
+font-family: 'Skranji', cursive;
+font-family: 'Slackey', cursive;
+*/
+
+body,
+html {
+  background-color: #6b490b;
+  display: block;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0%;
+}
+
+ul {
+  padding: unset;
+  display: contents;
+  list-style-type: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: unset;
+}
+
+header {
+  text-align: center;
+}
+
+input {
+  color: #222;
+  background-color: white;
+  border: 2px solid black;
+}
+
+input:focus-visible {
+  outline: unset;
+}

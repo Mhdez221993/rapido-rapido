@@ -1,0 +1,244 @@
+.l-item-detail {
+  background-color: $color-yellow;
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  display: grid;
+  grid-template-rows: 15vh 50vh 20vh 15vh;
+
+  .close-item {
+    position: fixed;
+    width: 24px;
+    top: 10px;
+    right: 10px;
+    z-index: 3;
+  }
+
+  .l-item-detail-image {
+    position: fixed;
+    height: 110vh;
+    top: -10vh;
+  }
+
+  .l-item-detail-title {
+    display: grid;
+    grid-row-start: 1;
+    color: $color-red-dark;
+    font-family: "Skranji", cursive;
+    padding-top: 15%;
+    height: 25vh;
+
+    .l-item-detail-title-large {
+      align-self: center;
+      font-size: 58px;
+      text-align: center;
+      letter-spacing: 0;
+      text-transform: capitalize;
+      z-index: 1;
+    }
+
+    .l-item-detail-title-price {
+      align-self: end;
+      text-align: end;
+      font-size: 28px;
+      font-weight: 700;
+      margin-right: 5%;
+      z-index: 4;
+    }
+  }
+
+  .l-item-detail-main {
+    grid-row-start: 2;
+    position: relative;
+
+    .l-item-detail-main-image {
+      margin-top: 10vh;
+
+      .l-item-detail-main-image-main {
+        position: absolute;
+        max-width: 100%;
+        margin-left: 5%;
+        margin-right: 5%;
+        bottom: 10vh;
+        z-index: 1;
+      }
+
+      .l-item-detail-main-image-shape {
+        position: absolute;
+        width: 90%;
+        margin-left: 5%;
+        margin-right: 5%;
+        bottom: 10vh;
+      }
+    }
+
+    &__stars {
+      width: 90px;
+      height: 70px;
+      border: 3px solid #ffc107;
+      border-radius: 8px;
+      background-color: white;
+      position: absolute;
+      display: grid;
+      bottom: 10%;
+      left: 10%;
+      z-index: 5;
+
+      .stars-img {
+        align-self: end;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .stars-count {
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 5%;
+        font-family: "Sansita", sans-serif;
+        font-size: 18px;
+        font-weight: 700;
+      }
+    }
+  }
+
+  &__ingredients {
+    display: grid;
+    font-family: "Sansita", sans-serif;
+    font-size: 24px;
+    text-align: center;
+    grid-row-start: 3;
+    z-index: 1;
+
+    .ingredients-title {
+      align-self: center;
+      font-size: inherit;
+    }
+
+    .ingredients-content {
+      font-size: inherit;
+      line-height: 28px;
+    }
+  }
+
+  &__footbar {
+    display: grid;
+    grid-row-start: 4;
+
+    .footbar-background {
+      position: absolute;
+      bottom: 0%;
+    }
+
+    .footbar-comments {
+      grid-column-start: 1;
+      justify-self: center;
+      align-self: center;
+      transform: translateY(30%);
+      z-index: 1;
+    }
+
+    .footbar-star {
+      grid-column-start: 2;
+      justify-self: center;
+      z-index: 1;
+    }
+
+    .footbar-reserve {
+      grid-column-start: 3;
+      justify-self: center;
+      align-self: center;
+      transform: translateY(30%);
+      z-index: 1;
+    }
+  }
+
+  @media only screen and (min-width: 1200px) {
+    border: 3px solid $color-golden;
+    border-radius: 18px;
+    margin: 5%;
+    margin-left: 25%;
+    margin-right: 25%;
+    width: 50%;
+    height: 80%;
+    grid-template-rows: 30% 45% 10%;
+
+    .l-item-detail-main__stars {
+      bottom: 30%;
+      left: -20%;
+    }
+
+    .l-item-detail-title {
+      padding-top: 1%;
+
+      .l-item-detail-title-large {
+        font-size: 92px;
+      }
+
+      .l-item-detail-title-price {
+        text-align: center;
+        width: 100%;
+        transform: translateX(25%) translateY(10px);
+        font-size: 48px;
+      }
+    }
+
+    .l-item-detail-main {
+      justify-self: center;
+
+      .l-item-detail-main-image {
+        width: 300px;
+        bottom: unset;
+
+        .l-item-detail-main-image-main {
+          width: 360px;
+          bottom: 5%;
+          margin-left: 10%;
+        }
+
+        .l-item-detail-main-image-shape {
+          width: 420px;
+          bottom: -10%;
+          margin: unset;
+          transform: translateX(-15%);
+        }
+      }
+    }
+
+    .l-item-detail__footbar {
+      .footbar-background {
+        display: none;
+      }
+
+      .footbar-comments {
+        width: 30%;
+        transform: translateY(-10%);
+      }
+
+      .footbar-reserve {
+        width: 30%;
+        transform: translateY(-10%);
+      }
+
+      .footbar-star {
+        width: 20%;
+        align-self: center;
+      }
+    }
+
+    .l-item-detail__ingredients {
+      transform: translateY(40%);
+    }
+
+    .l-item-detail-image {
+      height: 130vh;
+      top: -10vh;
+    }
+
+    .close-item {
+      position: absolute;
+      top: 5%;
+      right: 5%;
+      color: $color-golden;
+    }
+  }
+}

@@ -1,0 +1,25 @@
+// babel.config.js
+module.exports = {
+  presets: [['@babel/preset-env', { targets: { node: 'current' } }]], 
+ return {
+    presets
+  }
+  plugins: [
+    'js-loader/babel',
+    'syntax-dynamic-import',
+    '@babel/plugin-transform-modules-commonjs',
+    [
+      'transform-runtime',
+      {
+        helpers: false,
+        polyfill: false,
+      },
+    ],
+    'lodash',
+  ],
+  env: {
+    test: {
+      plugins: ['@babel/plugin-transform-modules-commonjs'],
+    },
+  },
+};
