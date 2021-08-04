@@ -1,10 +1,10 @@
 module.exports = {
   verbose: true,
-  moduleFileExtensions: ["js", "jsx", "ts", "tsx"],
-  moduleDirectories: ["node_modules", "src"],
-  testEnvironment: "jsdom",
+  moduleFileExtensions: ['js', 'jsx', 'ts', 'tsx'],
+  moduleDirectories: ['node_modules', 'src'],
+  testEnvironment: 'jsdom',
   transform: {
-    "^.+\\.jsx?$": "babel-jest",
+    '^.+\\.jsx?$': 'babel-jest',
   },
-  setupFilesAfterEnv: ["<rootDir>/jest-setup.js"],
+  setupFilesAfterEnv: ['<rootDir>/jest-setup.js'],
 };

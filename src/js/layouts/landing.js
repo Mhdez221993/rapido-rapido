@@ -1,11 +1,11 @@
-import burger from "../../images/burgerIllustration.png";
-import hotdog from "../../images/hotdogIllustration.png";
-import doughnut from "../../images/donutIllustration.png";
-import pizza from "../../images/pizzaIllustration.png";
-import drink from "../../images/drinkIllustration.png";
-import fries from "../../images/friesIllustration.png";
-import shadow from "../../images/shadowIllustration.png";
-import arrow from "../../images/down-arrow.svg";
+import burger from '../../images/burgerIllustration.png';
+import hotdog from '../../images/hotdogIllustration.png';
+import doughnut from '../../images/donutIllustration.png';
+import pizza from '../../images/pizzaIllustration.png';
+import drink from '../../images/drinkIllustration.png';
+import fries from '../../images/friesIllustration.png';
+import shadow from '../../images/shadowIllustration.png';
+import arrow from '../../images/down-arrow.svg';
 
 const landingLayout = `<section class="l-landing">
         <section class="l-landing-hero">

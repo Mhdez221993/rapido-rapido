@@ -1,7 +1,7 @@
 /**         All the DOM manipulation will be done from this module          */
-import { Api } from './api';
-import menuLayout from './mock-layouts/menu';
-import itemLayout from './mock-layouts/item';
+import Api from './api.js';
+import menuLayout from './mock-layouts/menu.js';
+import itemLayout from './mock-layouts/item.js';
 import modalReservationsLayout from './mock-layouts/modal-reserve.js';
 import modalCommentsLayout from './mock-layouts/modal-comments.js';
 import modalCommentNewLayout from './mock-layouts/modal-comment-new.js';
@@ -212,7 +212,7 @@ function testStart() {
 
 testStart();
 
-module.exports = {
+export {
   testStart,
   displayItem,
   displayComments,

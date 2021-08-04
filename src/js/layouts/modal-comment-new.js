@@ -1,4 +1,4 @@
-import modal from "../../images/modalPurple.svg";
+import modal from '../../images/modalPurple.svg';
 
 const modalCommentNewLayout = `<section id="modal-comments-new" class="l-modal">
         <img class="l-modal-background" src="${modal}" alt="main-image" />

@@ -10,7 +10,7 @@ import {
   microverseApiComments,
   microverseApiLikes,
   microverseApiReservations,
-} from './testConstants';
+} from './testConstants.js';
 
 class Api {
   constructor() {
@@ -94,4 +94,4 @@ class Api {
   }
 }
 
-module.exports = { Api };
+export default Api;

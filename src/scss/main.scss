@@ -20,7 +20,7 @@
    |              |___1.1.1 boxes
    |              |
    |              |
-   |              |___1.1.2 variables   
+   |              |___1.1.2 variables
    |
    |
    |___1.2 base
@@ -50,11 +50,10 @@
                  |___1.4.1 landing
                  |
                  |
-                 |___1.4.2 modal                                             
+                 |___1.4.2 modal
                  |
                  |
-                 |___1.4.3 menu             
-
+                 |___1.4.3 menu
 
 */
 @import "abstract/boxes";
@@ -73,7 +72,7 @@
   box-sizing: border-box;
 }
 
-/* 
+/*
 font-family: 'Sansita', sans-serif;
 font-family: 'Skranji', cursive;
 font-family: 'Slackey', cursive;
@@ -108,8 +107,6 @@ p {
 header {
   text-align: center;
 }
-
-
 
 input {
   color: #222;
