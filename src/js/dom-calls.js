@@ -21,9 +21,7 @@ function addStar(item) {
   menu[index].stars = count;
   const data = { item_id: item.name };
   api.postLikes(data).then((response) => {
-    if (response === "Created") {
-      localStorage(menu);
-    }
+    return response;
   });
   return count;
 }
