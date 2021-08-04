@@ -11,7 +11,7 @@
     ]
   },
   "scripts": {
-    "test": "jest",
+    "test": "jest --watchAll",
     "jest": "jest --watchAll * .js",
     "start": "webpack serve --open",
     "server": "node server.js",
@@ -69,5 +69,5 @@
     "regenerator-runtime": "^0.13.9",
     "style-loader": "^3.0.0"
   },
-  "main": "src.index.js"
+  "main": "server.js"
 }
