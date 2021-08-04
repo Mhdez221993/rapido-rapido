@@ -1,15 +1,14 @@
-import shadow from '../../images/shadowTr.png';
-import itemShape from '../../images/item-shape.svg';
-import itemShapeBackground from '../../images/item-shape-background.svg';
+import shadow from "../../images/shadowTr.png";
+import itemShape from "../../images/item-shape.svg";
+import itemShapeBackground from "../../images/item-shape-background.svg";
 
 const menuLayout = (menu) => {
   const menuPairs = menu.reduce((result, value, index, array) => {
     if (index % 2 === 0) result.push(array.slice(index, index + 2));
     return result;
   }, []);
-  const newMenuPairs =  []
-  menu.flatMap(el => newMenuPairs.push(el))
-
+  const newMenuPairs = [];
+  menu.flatMap((el) => newMenuPairs.push(el));
 
   const menuSection = `<section id="menu" class="l-menu">
                        <header class="l-menu-hero">
@@ -19,10 +18,14 @@ const menuLayout = (menu) => {
                         </header>
                         <section class="l-menu-main">   
                                                
-                          ${newMenuPairs.map( (element) => `
+                          ${newMenuPairs
+                            .map(
+                              (element) => `
                             <div class="l-menu-main-group">
                                  <img
-                                    src=${element.image} alt="burger" class="l-menu-main-item-img"
+                                    src=${
+                                      element.image
+                                    } alt="burger" class="l-menu-main-item-img"
                                   />
                                   <img
                                     src=${shadow} alt="shadow" class="l-menu-main-item-shadow shadow-left"
@@ -30,7 +33,8 @@ const menuLayout = (menu) => {
                                  <img
                                    id="burger" src=${itemShape} alt="item-shape" class="l-menu-main-item-shape"
                                  />
-                                 ${ /*
+                                 ${
+                                   /*
 
                                  <img
                                    src=${itemShapeBackground}
@@ -39,9 +43,11 @@ const menuLayout = (menu) => {
                                  />
 
                                  <h6 class="l-menu-main-item-text">${element.name}</h6>
-                                 */''}
+                                 */ ""
+                                 }
                             </div>`
-                          ).join('')}
+                            )
+                            .join("")}
                         </section>
                      </section>`;
   return menuSection;
