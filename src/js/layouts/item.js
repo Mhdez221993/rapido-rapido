@@ -1,11 +1,11 @@
-import itemShape from '../../images/item-shape-large.png';
-import lines from '../../images/zigzag.svg';
-import starLarge from '../../images/star-large.svg';
-import starSmall from '../../images/star-small.svg';
-import comments from '../../images/comments-icon.svg';
-import reserve from '../../images/reserve-icon.svg';
-import footBarBackground from '../../images/footbar.svg';
-import close from '../../images/close.svg';
+import itemShape from "../../images/item-shape-large.png";
+import lines from "../../images/zigzag.svg";
+import starLarge from "../../images/star-large.svg";
+import starSmall from "../../images/star-small.svg";
+import comments from "../../images/comments-icon.svg";
+import reserve from "../../images/reserve-icon.svg";
+import footBarBackground from "../../images/footbar.svg";
+import close from "../../images/close.svg";
 
 const itemLayout = (item) => {
   if (item.stars === undefined) {

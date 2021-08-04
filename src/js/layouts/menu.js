@@ -1,6 +1,6 @@
-import shadow from '../../images/shadowTr.png';
-import itemShape from '../../images/item-shape.svg';
-import itemShapeBackground from '../../images/item-shape-background.svg';
+import shadow from "../../images/shadowTr.png";
+import itemShape from "../../images/item-shape.svg";
+import itemShapeBackground from "../../images/item-shape-background.svg";
 
 const menuLayout = (menu) => {
   const menuPairs = menu.reduce((result, value, index, array) => {
@@ -17,7 +17,7 @@ const menuLayout = (menu) => {
                         <section class="l-menu-main">   
                                                
                            ${menuPairs.map(
-    (element) => `<div class="l-menu-main-group">
+                             (element) => `<div class="l-menu-main-group">
                                <div class="l-menu-main-item item-left">
                                  <img
                                    src=${element[0].image}
@@ -68,8 +68,8 @@ const menuLayout = (menu) => {
 
                                  <h6 class="l-menu-main-item-text">${element[1].name}</h6>
                                </div>
-                             </div>`,
-  )}
+                             </div>`
+                           )}
                                
                          </section>
                      </section>`;
