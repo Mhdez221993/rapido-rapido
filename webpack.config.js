@@ -1,5 +1,6 @@
 const path = require('path');
 const { WebpackManifestPlugin } = require('webpack-manifest-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const options = {};
 module.exports = {
