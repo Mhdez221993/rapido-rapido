@@ -101,7 +101,7 @@
     margin-right: 25%;
     width: 50%;
     height: 80%;
-    grid-template-rows: 30% 45% 10%;
+    grid-template-rows: 30% 55% 15%;
 
     .l-item-detail-title {
       padding-top: 1%;
@@ -134,15 +134,16 @@
 
         .l-item-detail-main-image-shape {
           width: 420px;
-          bottom: -10%;
+          top: -20%;
           margin: unset;
+          bottom: unset;
           transform: translateX(-15%);
         }
       }
     }
 
     .l-item-detail__ingredients {
-      transform: translateY(65%);
+      transform: unset;
     }
 
     .l-item-detail-image {

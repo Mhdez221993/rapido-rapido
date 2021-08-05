@@ -50,7 +50,6 @@
 
       .shadow-burger {
         display: block;
-        transform: translate(60%, -200%);
       }
 
       .img-drink {
@@ -125,12 +124,13 @@
 
       .landing-image {
         transform: rotate(-90deg);
+        cursor: pointer;
       }
     }
   }
 
   @media only screen and (min-width: 992px) {
-    grid-template-rows: auto auto auto;
+    grid-template-rows: auto 30vh auto;
 
     .l-landing-hero {
       padding-top: unset;
@@ -155,6 +155,7 @@
 
     .l-landing-hero__main {
       grid-row-start: 2;
+      height: 30vh;
 
       &--image {
         position: absolute;
@@ -170,66 +171,79 @@
         display: block;
         top: -50%;
         left: -5%;
+        animation: up-down 5s ease-in-out infinite;
+        transform: translateY(1%);
       }
 
       .shadow-drink {
         display: block;
         top: 100%;
         left: -2%;
+        animation: shadow-spread 5s ease-in-out infinite;
       }
 
       .img-doughnut {
         display: block;
         top: -35%;
         left: 15%;
+        animation: up-down 5s ease-in-out infinite 1s;
       }
 
       .shadow-doughnut {
         display: block;
         top: 125%;
         left: 19%;
+        animation: shadow-spread 5s ease-in-out infinite 1s;
       }
 
       .img-fries {
         display: block;
         top: -50%;
         left: 30%;
+        animation: up-down 5s ease-in-out infinite 1.2s;
       }
 
       .shadow-fries {
         display: block;
         top: 95%;
-        left: 35%;
-        transform: scale(0.6);
+        left: 42%;
+        transform: scale(1);
+        animation: shadow-spread 5s ease-in-out infinite 1.2s;
+        width: 100px;
       }
 
       .img-burger {
         display: block;
         left: 45%;
+        animation: up-down 5s ease-in-out infinite 0.75s;
       }
 
       .shadow-burger {
         display: block;
         top: 120%;
         left: 50%;
+        animation: shadow-spread 5s ease-in-out infinite 0.75s;
       }
 
       .img-hotdog {
         display: block;
         top: -50%;
         left: 65%;
+        animation: up-down 5s ease-in-out infinite 1.75s;
       }
 
       .shadow-hotdog {
         display: block;
         top: 120%;
         left: 72%;
+        animation: shadow-spread 5s ease-in-out infinite 1.75s;
       }
 
       .img-pizza {
         display: block;
         top: -50%;
         left: 83%;
+        animation: up-down 5s ease-in-out infinite 0.4s;
       }
 
       .shadow-pizza {
@@ -237,6 +251,7 @@
         top: 100%;
         left: 88%;
         transform: scale(0.7);
+        animation: shadow-spread 5s ease-in-out infinite 0.4s;
       }
     }
 
@@ -250,9 +265,40 @@
       }
 
       .landing-image {
-        transform: rotate(-90deg) scale(1.8);
+        transform: rotate(-90deg) translateX(0%) translateY(0%) scale(1.8);
         margin-left: 50px;
+        animation: arrow-move-left 2.5s ease-in-out infinite;
       }
     }
+  }
+}
+
+@keyframes arrow-move-left {
+  0% {
+    transform: rotate(-90deg) translateX(0%) translateY(0%) scale(1.8);
+  }
+
+  50% {
+    transform: rotate(-90deg) translateX(0%) translateY(50px) scale(1.8);
+  }
+}
+
+@keyframes up-down {
+  0% {
+    transform: translateY(0%) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(50px) rotate(6deg);
+  }
+}
+
+@keyframes shadow-spread {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.2);
   }
 }
