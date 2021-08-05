@@ -1,6 +1,7 @@
 ![Microverse](https://img.shields.io/badge/Microverse-blueviolet)
 
 # JavaScript-capstone-project
+
 The JavaScript capstone project is about building our own web application based on an external API.  The webapp have 3 user interfaces:
 
 - A home page showing a list of items that you can "like."
@@ -18,6 +19,9 @@ The JavaScript capstone project is about building our own web application based 
 - The following Design System was created to serve as guideline: 
   [Figma design system](https://www.figma.com/file/xZwuAa1Fsl2Afi4tkqVWuo/Untitled?node-id=0%3A1)
 
+# Project View
+
+![jscapstone](https://user-images.githubusercontent.com/75126481/128336980-e14bb353-3267-427e-9e2e-c18699b14137.png)
 
 =======
 
