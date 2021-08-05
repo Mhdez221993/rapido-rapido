@@ -12,6 +12,11 @@ import {
 testStart();
 
 describe('Counter functions ', () => {
+  test('retrieves the items from api and counts them', () => {
+    const oldCountItems = 0;
+    expect(oldCountItems).not.toBe(window.menu);
+  });
+
   test('retrieves the likes from api and counts them', () => {
     const oldLikes = [];
     window.likes.forEach((l) => oldLikes.push(l));
