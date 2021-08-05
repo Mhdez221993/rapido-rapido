@@ -33,7 +33,7 @@ const modalCommentsLayout = (item) => {
 };
 
 const RemovEmptyCooment = item => {
-  return item.filter(v => !v.comment.trim() !== true || v.comment.length < 5)
+  return item.filter(v => !v.comment.trim() !== true && v.username.length > 3)
 }
 
 export default modalCommentsLayout;
