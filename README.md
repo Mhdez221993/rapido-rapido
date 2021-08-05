@@ -80,7 +80,7 @@ We have counters in all the interfaces that show:
 
 If you want a copy of this file go to the github repository and download it from there
 
-- [JavaScript-capstone-project](https://github.com/Mhdez221993/JavaScript-capstone-project)
+- [JavaScript-capstone-project](https://github.com/Mhdez221993/JavaScript-capstone-project/dist)
 
 
 ### Live
