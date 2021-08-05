@@ -64,6 +64,8 @@ function fetchReservations(item) {
 }
 
 function displayCommentNew(item) {
+  const commentsModal = document.getElementById('modal-comments');
+  commentsModal.style.visibility = 'hidden';
   main.insertAdjacentHTML('beforeend', modalCommentNewLayout);
   const submitBtn = document.getElementById('btn-new-submit');
   const cancelBtn = document.getElementById('btn-new-cancel');
@@ -78,17 +80,35 @@ function displayCommentNew(item) {
       username,
       comment,
     };
-    postComments(data).then((response) => {
-      if (response === 'Created') {
-        const modal = document.getElementById('modal-comments-new');
-        main.removeChild(modal);
-      }
-    });
+
+    let error = '';
+
+    if (!username) {
+      error += 'username,';
+    }
+    if (!comment) {
+      error += 'comment,';
+    }
+
+    if (username && comment) {
+      postComments(data).then((response) => {
+        if (response === 'Created') {
+          const modal = document.getElementById('modal-comments-new');
+          main.removeChild(modal);
+          commentsModal.style.visibility = 'visible';
+        }
+      });
+    } else {
+      const warning = document.getElementsByClassName('new-comment-warning')[0];
+      warning.textContent = `Check ${error} it is not correct`;
+      warning.style.display = 'block';
+    }
   });
 
   cancelBtn.addEventListener('click', () => {
     const modal = document.getElementById('modal-comments-new');
     main.removeChild(modal);
+    commentsModal.style.visibility = 'visible';
   });
 }
 
@@ -124,19 +144,42 @@ function displayReserve(item) {
       const dateEnd = document.getElementById('reserve-date-end');
       const name = document.getElementById('reserve-name');
 
-      const data = {
-        item_id: item.name,
-        username: name.value,
-        date_start: dateStart.value,
-        date_end: dateEnd.value,
-      };
+      const isValidDateStart = Date.parse(dateStart);
+      const isValidDateEnd = Date.parse(dateEnd);
+      const isValidName = !!name;
 
-      postReservation(data).then((response) => {
-        if (response === 'Created') {
-          const modal = document.getElementById('modal-reserve');
-          main.removeChild(modal);
-        }
-      });
+      let error = '';
+      if (!isValidDateStart) {
+        error += 'start date,';
+      }
+      if (!isValidDateEnd) {
+        error += 'end date,';
+      }
+      if (!isValidName) {
+        error += 'name,';
+      }
+
+      if (isValidDateEnd && isValidDateStart && isValidName) {
+        const data = {
+          item_id: item.name,
+          username: name.value,
+          date_start: dateStart.value,
+          date_end: dateEnd.value,
+        };
+
+        postReservation(data).then((response) => {
+          if (response === 'Created') {
+            const modal = document.getElementById('modal-reserve');
+            main.removeChild(modal);
+          }
+        });
+      } else {
+        const warning = document.getElementsByClassName(
+          'new-reserve-warning',
+        )[0];
+        warning.textContent = `Check ${error} it is not correct`;
+        warning.style.display = 'block';
+      }
     });
   });
 }
@@ -145,29 +188,16 @@ function displayItem(item) {
   const menu = document.getElementById('menu');
   menu.style.display = 'none';
   main.insertAdjacentHTML('beforeend', itemLayout(item));
-  const commentsBtn = document.getElementById('btn-comments');
-  const reserveBtn = document.getElementById('btn-reserve');
   const closeBtn = document.getElementById('btn-close-item');
-  const startBtn = document.getElementById('btn-star');
-
-  commentsBtn.addEventListener('click', () => {
-    displayComments(item);
-  });
-
-  startBtn.addEventListener('click', () => {
-    const count = addStar(item);
-    const starsCount = document.getElementById('stars-count');
-    starsCount.innerText = count;
-  });
-
-  reserveBtn.addEventListener('click', () => {
-    displayReserve(item);
-  });
 
   closeBtn.addEventListener('click', () => {
     const itemSection = document.getElementById('item');
+    const modals = document.getElementsByClassName('l-modal');
     const main = document.getElementById('main');
     main.removeChild(itemSection);
+    Array.from(modals).forEach((item) => {
+      main.removeChild(item);
+    });
     menu.style.display = 'block';
   });
 }
@@ -175,6 +205,28 @@ function displayItem(item) {
 function displayMenu(menu) {
   main.innerHTML = null;
   main.insertAdjacentHTML('beforeend', menuLayout(menu));
+  const items = document.getElementsByClassName('l-menu-main-item');
+  Array.from(items).forEach((item, index) => {
+    const commentsBtn = document.getElementById(`btn-comments-${item.id}`);
+    const reserveBtn = document.getElementById(`btn-reserve-${item.id}`);
+    const starBtn = document.getElementById(`btn-star-${item.id}`);
+
+    commentsBtn.addEventListener('click', () => {
+      displayItem(menu[index]);
+      displayComments(menu[index]);
+    });
+
+    starBtn.addEventListener('click', () => {
+      const count = addStar(menu[index]);
+      const starsCount = document.getElementById(`stars-count-${item.id}`);
+      starsCount.innerText = count;
+    });
+
+    reserveBtn.addEventListener('click', () => {
+      displayItem(menu[index]);
+      displayReserve(menu[index]);
+    });
+  });
   const openItem = document.getElementsByClassName('l-menu-main-item-shape');
   Array.from(openItem).forEach((item, index) => {
     item.addEventListener('click', () => {

@@ -4,10 +4,10 @@
   height: 100vh;
   position: absolute;
   display: grid;
-  grid-template-rows: 15vh 50vh 20vh 15vh;
+  grid-template-rows: 15vh 65vh 20vh;
 
   .close-item {
-    position: fixed;
+    position: absolute;
     width: 24px;
     top: 10px;
     right: 10px;
@@ -56,10 +56,11 @@
 
       .l-item-detail-main-image-main {
         position: absolute;
+        width: 75%;
         max-width: 100%;
-        margin-left: 5%;
+        margin-left: 10%;
         margin-right: 5%;
-        bottom: 10vh;
+        top: 20vh;
         z-index: 1;
       }
 
@@ -68,35 +69,7 @@
         width: 90%;
         margin-left: 5%;
         margin-right: 5%;
-        bottom: 10vh;
-      }
-    }
-
-    &__stars {
-      width: 90px;
-      height: 70px;
-      border: 3px solid #ffc107;
-      border-radius: 8px;
-      background-color: white;
-      position: absolute;
-      display: grid;
-      bottom: 10%;
-      left: 10%;
-      z-index: 5;
-
-      .stars-img {
-        align-self: end;
-        margin-left: auto;
-        margin-right: auto;
-      }
-
-      .stars-count {
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 5%;
-        font-family: "Sansita", sans-serif;
-        font-size: 18px;
-        font-weight: 700;
+        bottom: 2vh;
       }
     }
   }
@@ -120,38 +93,6 @@
     }
   }
 
-  &__footbar {
-    display: grid;
-    grid-row-start: 4;
-
-    .footbar-background {
-      position: absolute;
-      bottom: 0%;
-    }
-
-    .footbar-comments {
-      grid-column-start: 1;
-      justify-self: center;
-      align-self: center;
-      transform: translateY(30%);
-      z-index: 1;
-    }
-
-    .footbar-star {
-      grid-column-start: 2;
-      justify-self: center;
-      z-index: 1;
-    }
-
-    .footbar-reserve {
-      grid-column-start: 3;
-      justify-self: center;
-      align-self: center;
-      transform: translateY(30%);
-      z-index: 1;
-    }
-  }
-
   @media only screen and (min-width: 1200px) {
     border: 3px solid $color-golden;
     border-radius: 18px;
@@ -161,11 +102,6 @@
     width: 50%;
     height: 80%;
     grid-template-rows: 30% 45% 10%;
-
-    .l-item-detail-main__stars {
-      bottom: 30%;
-      left: -20%;
-    }
 
     .l-item-detail-title {
       padding-top: 1%;
@@ -191,8 +127,9 @@
 
         .l-item-detail-main-image-main {
           width: 360px;
-          bottom: 5%;
-          margin-left: 10%;
+          top: -5%;
+          margin-left: unset;
+          bottom: unset;
         }
 
         .l-item-detail-main-image-shape {
@@ -204,29 +141,8 @@
       }
     }
 
-    .l-item-detail__footbar {
-      .footbar-background {
-        display: none;
-      }
-
-      .footbar-comments {
-        width: 30%;
-        transform: translateY(-10%);
-      }
-
-      .footbar-reserve {
-        width: 30%;
-        transform: translateY(-10%);
-      }
-
-      .footbar-star {
-        width: 20%;
-        align-self: center;
-      }
-    }
-
     .l-item-detail__ingredients {
-      transform: translateY(40%);
+      transform: translateY(65%);
     }
 
     .l-item-detail-image {
