@@ -387,7 +387,7 @@ input {
   line-height: 28px;
 }
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 992px) {
   .l-item-detail {
     border: 3px solid #ffb84f;
     border-radius: 18px;
@@ -576,7 +576,7 @@ input {
   transform: rotate(-90deg);
 }
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 992px) {
   .l-landing {
     grid-template-rows: auto auto auto;
   }
@@ -810,7 +810,7 @@ input {
   color: black;
 }
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 992px) {
   .l-modal {
     height: max-content;
     width: 60%;
@@ -888,7 +888,7 @@ input {
   }
 }
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 992px) {
   .l-modal-reservations {
     background-color: #85bd7c;
     border: 3px solid #2a6b00;
@@ -1091,7 +1091,7 @@ input {
   grid-column-start: 2;
 }
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 992px) {
   .l-menu {
     display: block;
   }

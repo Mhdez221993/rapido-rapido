@@ -127,7 +127,7 @@
     color: black;
   }
 
-  @media only screen and (min-width: 1200px) {
+  @media only screen and (min-width: 992px) {
     height: max-content;
     width: 60%;
     background-color: $color-purple-light;
@@ -221,7 +221,7 @@
 }
 
 .l-modal-reservations {
-  @media only screen and (min-width: 1200px) {
+  @media only screen and (min-width: 992px) {
     background-color: $color-green-light;
     border: 3px solid $color-green-dark;
   }
