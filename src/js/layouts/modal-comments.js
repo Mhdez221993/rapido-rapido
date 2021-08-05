@@ -1,5 +1,10 @@
+// eslint-disable max-len
+function RemovEmptyCooment(item) {
+  return item.filter((v) => !v.comment.trim() !== true && v.username.length > 3);
+}
+
 const modalCommentsLayout = (item) => {
-  let newItem = RemovEmptyCooment(item.comments);
+  const newItem = RemovEmptyCooment(item.comments);
   let template = `<section id="modal-comments" class="l-modal">
         <h3 class="l-modal-title">Comments</h3>
         <section class="modal-list">
@@ -15,11 +20,11 @@ const modalCommentsLayout = (item) => {
         <h3 class="l-modal-title">Comments</h3>
         <section class="modal-list">
         ${newItem.map(
-      (i) => `<div class="modal-list-item  list-item-comment">
+    (i) => `<div class="modal-list-item  list-item-comment">
             <h5>${i.username}</h5>
             <h5 class="comment-text">${i.comment}</h5>
           </div>`,
-    )
+  )
     .join('')}
         </section>        
         <section class="buttons">
@@ -31,9 +36,5 @@ const modalCommentsLayout = (item) => {
   }
   return template;
 };
-
-const RemovEmptyCooment = item => {
-  return item.filter(v => !v.comment.trim() !== true && v.username.length > 3)
-}
 
 export default modalCommentsLayout;

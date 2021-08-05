@@ -73,17 +73,16 @@ function displayCommentNew(item) {
   const nameInput = document.getElementById('comment-name');
 
   submitBtn.addEventListener('click', () => {
-    
     const username = nameInput.value;
     const comment = textInput.value;
 
-    if(comment.length < 5) {
-      alert('Please provide a valid comment')
-      return
-    } else if(username.length < 3){
+    if (comment.length < 5) {
+      alert('Please provide a valid comment');
+      return;
+    } if (username.length < 3) {
       nameInput.value = '';
-      alert('Please provide a valid name')
-      return
+      alert('Please provide a valid name');
+      return;
     }
 
     const data = {
