@@ -14,7 +14,7 @@ module.exports = {
   },
   plugins: [
     new GhPagesWebpackPlugin({
-        path: 'https://mhdez221993.github.io/JavaScript-capstone-project/',
+        path: './dist',
         options: {
             message: 'Update Home Page',
             user: {
