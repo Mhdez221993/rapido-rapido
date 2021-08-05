@@ -82,12 +82,29 @@ function displayCommentNew(item) {
       username,
       comment,
     };
-    postComments(data).then((response) => {
-      if (response === "Created") {
-        const modal = document.getElementById("modal-comments-new");
-        main.removeChild(modal);
-      }
-    });
+
+    let error = "";
+
+    if (!username) {
+      error += "username,";
+    }
+    if (!comment) {
+      error += "comment,";
+    }
+
+    if (username && comment) {
+      postComments(data).then((response) => {
+        if (response === "Created") {
+          const modal = document.getElementById("modal-comments-new");
+          main.removeChild(modal);
+          commentsModal.style.visibility = "visible";
+        }
+      });
+    } else {
+      const warning = document.getElementsByClassName("new-comment-warning")[0];
+      warning.textContent = `Check ${error} it is not correct`;
+      warning.style.display = "block";
+    }
   });
 
   cancelBtn.addEventListener("click", () => {
@@ -108,6 +125,7 @@ function displayComments(item) {
 
     cancelBtn.addEventListener("click", () => {
       const modal = document.getElementById("modal-comments");
+      console.log(modal);
       main.removeChild(modal);
     });
   });
@@ -129,19 +147,43 @@ function displayReserve(item) {
       const dateEnd = document.getElementById("reserve-date-end");
       const name = document.getElementById("reserve-name");
 
-      const data = {
-        item_id: item.name,
-        username: name.value,
-        date_start: dateStart.value,
-        date_end: dateEnd.value,
-      };
+      const isValidDateStart = Date.parse(dateStart);
+      const isValidDateEnd = Date.parse(dateEnd);
+      const isValidName = !!name;
 
-      postReservation(data).then((response) => {
-        if (response === "Created") {
-          const modal = document.getElementById("modal-reserve");
-          main.removeChild(modal);
-        }
-      });
+      let error = "";
+      if (!isValidDateStart) {
+        error += "start date,";
+      }
+      if (!isValidDateEnd) {
+        error += "end date,";
+      }
+      if (!isValidName) {
+        error += "name,";
+      }
+      console.log(error);
+
+      if (isValidDateEnd && isValidDateStart && isValidName) {
+        const data = {
+          item_id: item.name,
+          username: name.value,
+          date_start: dateStart.value,
+          date_end: dateEnd.value,
+        };
+
+        postReservation(data).then((response) => {
+          if (response === "Created") {
+            const modal = document.getElementById("modal-reserve");
+            main.removeChild(modal);
+          }
+        });
+      } else {
+        const warning = document.getElementsByClassName(
+          "new-reserve-warning"
+        )[0];
+        warning.textContent = `Check ${error} it is not correct`;
+        warning.style.display = "block";
+      }
     });
   });
 }

@@ -14,15 +14,13 @@ const modalCommentsLayout = (item) => {
         <h3 class="l-modal-title">Comments</h3>
         <section class="modal-list">
         ${item.comments
-          .map((i) => {
-            const comment = `<div class="modal-list-item  list-item-comment">
+    .map(
+      (i) => `<div class="modal-list-item  list-item-comment">
             <h5>${i.username}</h5>
-            <h5 class="comment-date">${i.date}</h5>
             <h5 class="comment-text">${i.comment}</h5>
-          </div>;`;
-            return comment;
-          })
-          .join("")}
+          </div>`,
+    )
+    .join('')}
         </section>        
         <section class="buttons">
           <button id="btn-new" class="btn-1 green-background">New Comment</button>

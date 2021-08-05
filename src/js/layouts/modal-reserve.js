@@ -5,18 +5,20 @@ const modalReserveLayout = (item) => {
         </section>
         <section class="new">
           <h5 class="new-title">New Reservation</h5>
+           <div class="new-input">
+            <input id="reserve-date-start" class="new-reservation-input" type="date" placeholder="Start: 2018-07-21"/>
+       
+            </div>
           <div class="new-input">
-            <input id="reserve-date-start" class="new-reservation-input" type="text" placeholder="Input your date start"/>
-          </div>
-          <div class="new-input">
-            <input id="reserve-date-end" class="new-reservation-input" type="text" placeholder="Input your date end" />
+            <input id="reserve-date-end" class="new-reservation-input" type="date" placeholder="End: 2018-07-22"/>
           </div>      
           <div class="new-input">
             <input id="reserve-name" class="new-reservation-input" type="text" placeholder="Input your name"/>
           </div>
+          <h6 class='new-reserve-warning'></h6>
         </section>
         <section class="buttons">
-          <button id="btn-reserve-new" class="btn-1">Submit</button>
+          <button id="btn-reserve-new" class="btn-1 green-background">Submit</button>
           <button id="btn-reserve-cancel" class="btn-1 cancel">Go Back</button>
         </section>
       </section>`;
@@ -42,17 +44,19 @@ const modalReserveLayout = (item) => {
         <section class="new">
           <h5 class="new-title">New Reservation</h5>
           <div class="new-input">
-            <input id="reserve-date-start" class="new-reservation-input" type="text" placeholder="Input your date start"/>
-          </div>
+            <input id="reserve-date-start" class="new-reservation-input" type="date" placeholder="Start: 2018-07-21"/>
+       
+            </div>
           <div class="new-input">
-            <input id="reserve-date-end" class="new-reservation-input" type="text" placeholder="Input your date end" />
+            <input id="reserve-date-end" class="new-reservation-input" type="date" placeholder="End: 2018-07-22"/>
           </div>      
           <div class="new-input">
             <input id="reserve-name" class="new-reservation-input" type="text" placeholder="Input your name"/>
           </div>
+             <h6 class='new-reserve-warning'></h6>
         </section>
         <section class="buttons">
-          <button id="btn-reserve-new" class="btn-1">Submit</button>
+          <button id="btn-reserve-new " class="btn-1 green-background">Submit</button>
           <button id="btn-reserve-cancel" class="btn-1 cancel">Go Back</button>
         </section>
       </section>`;

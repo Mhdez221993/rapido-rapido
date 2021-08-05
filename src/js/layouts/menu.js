@@ -1,10 +1,9 @@
-import shadow from "../../images/shadowTr.png";
-import itemShape from "../../images/item-shape.svg";
-import itemShapeBackground from "../../images/item-shape-background.svg";
-import comments from "../../images/comments-icon.svg";
-import reserve from "../../images/reserve-icon.svg";
-import starTinyFull from "../../images/star-tiny-full.svg";
-import starTinyEmpty from "../../images/star-tiny-empty.svg";
+import shadow from '../../images/shadowTr.png';
+import itemShape from '../../images/item-shape.svg';
+import itemShapeBackground from '../../images/item-shape-background.svg';
+import comments from '../../images/comments-icon.svg';
+import reserve from '../../images/reserve-icon.svg';
+import starTinyFull from '../../images/star-tiny-full.svg';
 
 const menuLayout = (menu) => {
   const menuPairs = menu.reduce((result, value, index, array) => {
@@ -24,8 +23,8 @@ const menuLayout = (menu) => {
                         <section class="l-menu-main">   
                                
                            ${menuPairs
-                             .map(
-                               (element) => `<div class="l-menu-main-group">
+    .map(
+      (element) => `<div class="l-menu-main-group">
                                <div id=${element[0].name} class="l-menu-main-item item-left">
                                  <div class="l-menu-main-item__stars">
                                   <img id="btn-star-${element[0].name}" class="stars-img" src=${starTinyFull} alt="stars" />
@@ -59,7 +58,7 @@ const menuLayout = (menu) => {
                                </div>
                                <div id=${element[1].name} class="l-menu-main-item item-right">
                                <div class="l-menu-main-item__stars">
-                                  <img id="btn-star-${element[1].name}" class="stars-img" src=${starTinyEmpty} alt="stars" />
+                                  <img id="btn-star-${element[1].name}" class="stars-img" src=${starTinyFull} alt="stars" />
                                   <h6 id=stars-count-${element[1].name} class="stars-count">${element[1].stars}</h6>
                                  </div>                               
                                  <img
@@ -87,9 +86,9 @@ const menuLayout = (menu) => {
                                  <img id="btn-reserve-${element[1].name}" class="item-reserve" src=${reserve} alt="reserve-button" />
                                 <h6 class="l-menu-main-item-text">${element[1].name}</h6>
                                </div>
-                             </div>`
-                             )
-                             .join("")}
+                             </div>`,
+    )
+    .join('')}
                                
                          </section>
                      </section>`;

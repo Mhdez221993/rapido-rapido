@@ -7,7 +7,7 @@
   grid-template-rows: 15vh 65vh 20vh;
 
   .close-item {
-    position: fixed;
+    position: absolute;
     width: 24px;
     top: 10px;
     right: 10px;
@@ -127,8 +127,9 @@
 
         .l-item-detail-main-image-main {
           width: 360px;
-          bottom: 5%;
-          margin-left: 10%;
+          top: -5%;
+          margin-left: unset;
+          bottom: unset;
         }
 
         .l-item-detail-main-image-shape {
@@ -141,7 +142,7 @@
     }
 
     .l-item-detail__ingredients {
-      transform: translateY(40%);
+      transform: translateY(65%);
     }
 
     .l-item-detail-image {

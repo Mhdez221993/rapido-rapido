@@ -31,12 +31,11 @@
       -webkit-text-stroke-width: 1px;
       -webkit-text-stroke-color: black;
     }
-     &__counter {
-     font-size: 12px;
-    margin-top: 3%;
-   }
+    &__counter {
+      font-size: 12px;
+      margin-top: 3%;
+    }
   }
-
 
   .l-menu-main {
     position: absolute;
@@ -47,7 +46,7 @@
     padding-bottom: 5vh;
     width: 100%;
     height: max-content;
-    overflow-x: hidden;  
+    overflow-x: hidden;
 
     .l-menu-main-group {
       display: grid;
@@ -183,11 +182,11 @@
         }
       }
 
-      .item-left {      
+      .item-left {
         grid-column-start: 1;
       }
 
-      .item-right {     
+      .item-right {
         grid-column-start: 2;
       }
     }
@@ -216,23 +215,28 @@
         padding-top: 3%;
         font-size: 32px;
       }
+
+      &__counter {
+        font-size: 16px;
+        margin-top: 12px;
+      }
     }
 
     .l-menu-main {
-      height: 100%;
       padding-top: 10px;
       align-content: center;
       transform: unset;
       padding-bottom: unset;
-      grid-template-rows: 100%;
       grid-template-columns: repeat(4, 25vw);
+      grid-template-rows: unset;
       overflow-y: hidden;
+      height: unset;
 
       .l-menu-main-group {
         grid-template-rows: auto auto;
         height: 60vh;
         width: 10vw;
-        transform: translateX(75%);
+        transform: unset;
 
         &:nth-child(1) {
           grid-column-start: 1;
@@ -255,7 +259,8 @@
         }
 
         .l-menu-main-item {
-          width: 10vw;
+          width: 250px;
+          height: 250px;
 
           .background-left {
             width: 250px;
@@ -301,6 +306,30 @@
             position: absolute;
             bottom: 0%;
             z-index: 6;
+          }
+
+          .item-comments {
+            transform: scale(1);
+          }
+
+          .item-reserve {
+            transform: scale(1);
+          }
+
+          &__stars {
+            bottom: 30%;
+            width: 80px;
+            height: 60px;
+            left: -30px;
+
+            .stars-img {
+              transform: scale(1.5);
+            }
+
+            .stars-count {
+              margin-top: 10%;
+              font-size: 16px;
+            }
           }
         }
 

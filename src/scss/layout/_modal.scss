@@ -2,7 +2,7 @@
   position: absolute;
   width: 100%;
   font-family: "Sansita", sans-serif;
-  bottom: -100vh;
+  top: 100%;
   height: max-content;
   padding: 5%;
   z-index: 5;
@@ -58,6 +58,14 @@
       margin-top: 5%;
       padding: 5%;
     }
+
+    .new-comment-warning {
+      display: block;
+    color: white;
+    font-size: 18px;
+    text-align: center;
+    margin-top: 5%;
+    }
   }
 
   .new {
@@ -74,6 +82,12 @@
       align-self: center;
       text-align: center;
     }
+
+    .new-input {
+      .new-reservation-input {
+        padding: 5%;
+      }
+    }
   }
 
   .buttons {
@@ -89,7 +103,6 @@
       color: $color-white;
       height: 32px;
       border-radius: 20px;
-      background-color: $color-purple-bright;
       font-size: 18px;
     }
   }
@@ -115,15 +128,17 @@
   }
 
   @media only screen and (min-width: 1200px) {
-    height: 90%;
+    height: max-content;
     width: 60%;
     background-color: $color-purple-light;
     border: 3px solid $color-purple-dark;
+    bottom: unset;
     margin: 2.5%;
     margin-left: 20%;
     margin-right: 20%;
     border-radius: 22px;
-    grid-template-rows: 15% 50% 30% 10%;
+    padding-top: unset;
+    grid-template-rows: 15% auto auto 10%;
 
     .modal-list {
       input {
@@ -143,6 +158,15 @@
         width: 50%;
         min-height: 100px;
         padding: 16px;
+      }
+
+      .new-comment-warning {
+        text-align: center;
+        width: 100%;
+        margin-top: 2%;
+        color: #b80000;
+        z-index: 4;
+        display: none;
       }
     }
 
@@ -167,7 +191,7 @@
     .new {
       width: 50%;
       border-radius: 6px;
-      border: 3px solid $color-green-dark;
+      border: 3px solid $color-purple-dark;
       background-color: #ffffff8a;
 
       .new-title {
@@ -179,8 +203,17 @@
         .new-reservation-input {
           padding: 3%;
           border-radius: 6px;
-          border: 3px solid $color-green-dark;
+          border: 3px solid $color-purple-dark;
         }
+      }
+
+      .new-reserve-warning {
+        color: red;
+        display: none;
+      }
+      .new-comment-warning {
+        color: red;
+        display: none;
       }
     }
   }
