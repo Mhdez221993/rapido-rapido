@@ -1,4 +1,5 @@
 const modalCommentsLayout = (item) => {
+  let newItem = RemovEmptyCooment(item.comments);
   let template = `<section id="modal-comments" class="l-modal">
         <h3 class="l-modal-title">Comments</h3>
         <section class="modal-list">
@@ -13,8 +14,7 @@ const modalCommentsLayout = (item) => {
     template = `<section id="modal-comments" class="l-modal">
         <h3 class="l-modal-title">Comments</h3>
         <section class="modal-list">
-        ${item.comments
-    .map(
+        ${newItem.map(
       (i) => `<div class="modal-list-item  list-item-comment">
             <h5>${i.username}</h5>
             <h5 class="comment-text">${i.comment}</h5>
@@ -31,5 +31,9 @@ const modalCommentsLayout = (item) => {
   }
   return template;
 };
+
+const RemovEmptyCooment = item => {
+  return item.filter(v => !v.comment.trim() !== true || v.comment.length < 5)
+}
 
 export default modalCommentsLayout;
