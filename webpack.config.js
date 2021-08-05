@@ -1,6 +1,7 @@
 const path = require('path');
 const { WebpackManifestPlugin } = require('webpack-manifest-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const GhPagesWebpackPlugin = require('gh-pages-webpack-plugin');
 
 const options = {};
 module.exports = {
@@ -12,6 +13,16 @@ module.exports = {
     contentBase: './dist',
   },
   plugins: [
+    new GhPagesWebpackPlugin({
+        path: './dist',
+        options: {
+            message: 'Update Home Page',
+            user: {
+                name: 'Moises Hernandez',
+                email: 'mhdezcoronado@gmail.com'
+            }
+        }
+    }),
     new HtmlWebpackPlugin({
       template: './src/index.html',
     }),
