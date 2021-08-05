@@ -1,9 +1,21 @@
 # JavaScript-capstone-project
-The JavaScript capstone project is about building our own web application based on an external API. We selected an API that provides data about food and then build the web app around it. The webapp have 3 user interfaces:
+The JavaScript capstone project is about building our own web application based on an external API.  The webapp have 3 user interfaces:
 
 - A home page showing a list of items that you can "like."
 - A popup window with more data about an item that you can use to comment on it or reserve it for a period of time.
-- In this project we also practiced giving code reviews to our teammates.
+- In this project we pratice giving code reviews to our teammates.
+- We built an API that provides data about food and then build the web app around it.
+  ![Custom Api](https://github.com/Metsanpeitto/microverse-capstone-2-api)
+
+- To avoid possible CORS conflicts when retrieving from an API we created a server bridge that deployed on
+  heroku helps us to workaround conflicts with the localhost and CORS policies.
+  ![CORS workaround](https://github.com/Metsanpeitto/cors-everywhere)
+  ![Deployed version](https://guarded-basin-44458.herokuapp.com/)
+  
+- We use Jest to test the counters of comments, items, reservations and likes.
+- The following Design System was created to serve as guideline: 
+  ![Figma design system](https://www.figma.com/file/xZwuAa1Fsl2Afi4tkqVWuo/Untitled?node-id=0%3A1)
+
 
 ![Microverse](https://img.shields.io/badge/Microverse-blueviolet)
 
@@ -13,21 +25,51 @@ The JavaScript capstone project is about building our own web application based 
 ## Built With 
 - JavaScript
 - Webpack
-- HTML/CSS
+- HTML/SCSS
 - Node.JS
-- jest
-- Figma
+- Jest
+- Figma 
+- Php/SQL 
+- Postman
 
 =======
 
 ### Project requirements
 
-- Read the [Leaderboard API documentation](https://www.notion.so/microverse/Leaderboard-API-service-24c0c3c116974ac49488d4eb0267ade3) to learn how to use this API.
-- Create a new game with the name of your choice by using the API.
-- Implement the "Refresh" button (receiving data from the API and parsing the JSON).
-- Implement the form "Submit" button (sending data to the API).
-- Use `async` and `await` JavaScript features to consume the API.
-- No styling is required.
+- You should build these interfaces:
+  - The *home page*.
+  - The *comments popup*.
+  - The *reservations popup* (only for the groups of 3 students).
+- You should follow the layout of the wireframes provided. You should personalize the rest of the design including colors, typographies, spacings, etc.
+- Home page
+  - When the page loads, the webapp retrieves data from:
+    - The selected API and shows the list of items on screen.
+    - The Involvement API to show the item likes.
+  - Remember that your page should make only 2 requests:
+    - One to the base API.
+    - And **one** to the Involvement API.
+  - When the user clicks on the Like button of an item, the interaction is recorded in the Involvement API and the screen is updated.
+  - When the user clicks on the "Comments" button, the Comments popup appears.
+  - When the user clicks on the "Reservations" button, the Reservations popup appears (only for the groups of 3 students).
+  - Home page header and navigation similar to the given mockup.
+  - Home page footer similar to the given mockup.
+- Comments popup
+  - When the popup loads, the webapp retrieves data from:
+    - The selected API and shows details about the selected item.
+    - The Involvement API to show the item comments.
+  - When the user clicks on the "Comment" button, the data is recorded in the Involvement API and the screen is updated.
+- Reservations popup (only for the groups of 3 students)
+  - When the popup loads, the webapp retrieves data from:
+    - The selected API and shows details about the selected item.
+    - The Involvement API to show the item reservations.
+  - When the user clicks on the "Reserve" button, the data is recorded in the Involvement API and the screen is updated.
+
+**Counters**
+We have counters in all the interfaces that show:
+- The number of items (home).
+- The number of comments (comments popup).
+- The number of reservations (reservations popup) - only for the groups of 3 students.
+
 
 
 
@@ -150,4 +192,7 @@ Give a ⭐️ if you like this project!
 - The amazing code reviewers for making me improve every day :thumbsup:
 
 =======
+
+[![License: CC BY-NC 4.0](https://licensebuttons.net/l/by-nc/4.0/80x15.png)](https://creativecommons.org/licenses/by-nc/4.0/)
+[![License: CC0-1.0](https://licensebuttons.net/l/zero/1.0/80x15.png)](http://creativecommons.org/publicdomain/zero/1.0/)
 

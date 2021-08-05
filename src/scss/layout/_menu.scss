@@ -1,13 +1,13 @@
 .l-menu {
   background-color: $color-yellow;
-  height: 100vh;
+  display: contents;
 
   .l-menu-hero {
     font-family: "Skranji", cursive;
     background-color: $color-yellow;
     grid-row-start: 1;
     padding-top: 10%;
-    height: 30vh;
+    height: max-content;
 
     &__title-1 {
       color: $color-green-bright;
@@ -31,23 +31,32 @@
       -webkit-text-stroke-width: 1px;
       -webkit-text-stroke-color: black;
     }
+
+    &__counter {
+      font-size: 12px;
+      margin-top: 3%;
+    }
   }
 
   .l-menu-main {
     position: absolute;
+    background-color: $color-yellow;
     display: grid;
     grid-template-rows: repeat(4, 30vh);
     padding-top: 5vh;
+    padding-bottom: 5vh;
     width: 100%;
-    height: 100%;
+    height: max-content;
     overflow-x: hidden;
-    overflow-y: scroll;
 
     .l-menu-main-group {
       display: grid;
       grid-template-columns: auto auto;
-      position: absolute;
-      width: 100%;
+      width: 90vw;
+      height: 200px;
+      margin-left: auto;
+      margin-right: auto;
+      position: relative;
 
       &:nth-child(1) {
         grid-row-start: 1;
@@ -69,6 +78,34 @@
         position: absolute;
         width: 45vw;
         height: 200px;
+
+        &__stars {
+          width: 50px;
+          height: 40px;
+          border: 3px solid #ffc107;
+          border-radius: 8px;
+          background-color: white;
+          position: absolute;
+          display: grid;
+          bottom: 1%;
+          left: 10%;
+          z-index: 5;
+
+          .stars-img {
+            align-self: end;
+            margin-left: auto;
+            margin-right: auto;
+          }
+
+          .stars-count {
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 5%;
+            font-family: "Sansita", sans-serif;
+            font-size: 12px;
+            font-weight: 700;
+          }
+        }
 
         .l-menu-main-item-img {
           width: 200px;
@@ -129,15 +166,28 @@
         .background-right {
           transform: rotate(0deg);
         }
+
+        .item-reserve {
+          position: absolute;
+          bottom: 0%;
+          right: 0%;
+          transform: scale(0.7);
+          z-index: 6;
+        }
+
+        .item-comments {
+          position: absolute;
+          left: 0%;
+          transform: scale(0.7);
+          z-index: 6;
+        }
       }
 
       .item-left {
-        left: -15px;
         grid-column-start: 1;
       }
 
       .item-right {
-        right: 25px;
         grid-column-start: 2;
       }
     }
@@ -166,23 +216,28 @@
         padding-top: 3%;
         font-size: 32px;
       }
+
+      &__counter {
+        font-size: 16px;
+        margin-top: 12px;
+      }
     }
 
     .l-menu-main {
-      height: 100%;
       padding-top: 10px;
       align-content: center;
       transform: unset;
       padding-bottom: unset;
-      grid-template-rows: 100%;
       grid-template-columns: repeat(4, 25vw);
+      grid-template-rows: unset;
       overflow-y: hidden;
+      height: unset;
 
       .l-menu-main-group {
         grid-template-rows: auto auto;
         height: 60vh;
         width: 10vw;
-        transform: translateX(75%);
+        transform: unset;
 
         &:nth-child(1) {
           grid-column-start: 1;
@@ -205,7 +260,8 @@
         }
 
         .l-menu-main-item {
-          width: 10vw;
+          width: 250px;
+          height: 250px;
 
           .background-left {
             width: 250px;
@@ -239,6 +295,36 @@
 
           .shape-right {
             width: 250px;
+          }
+
+          .item-reserve {
+            position: absolute;
+            bottom: 0%;
+            z-index: 6;
+            transform: scale(1);
+          }
+
+          .item-comments {
+            position: absolute;
+            bottom: 0%;
+            z-index: 6;
+            transform: scale(1);
+          }
+
+          &__stars {
+            bottom: 30%;
+            width: 80px;
+            height: 60px;
+            left: -30px;
+
+            .stars-img {
+              transform: scale(1.5);
+            }
+
+            .stars-count {
+              margin-top: 10%;
+              font-size: 16px;
+            }
           }
         }
 
