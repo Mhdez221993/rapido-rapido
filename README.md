@@ -5,16 +5,16 @@ The JavaScript capstone project is about building our own web application based 
 - A popup window with more data about an item that you can use to comment on it or reserve it for a period of time.
 - In this project we pratice giving code reviews to our teammates.
 - We built an API that provides data about food and then build the web app around it.
-  ![Custom Api](https://github.com/Metsanpeitto/microverse-capstone-2-api)
+  [Custom Api](https://github.com/Metsanpeitto/microverse-capstone-2-api)
 
 - To avoid possible CORS conflicts when retrieving from an API we created a server bridge that deployed on
   heroku helps us to workaround conflicts with the localhost and CORS policies.
-  ![CORS workaround](https://github.com/Metsanpeitto/cors-everywhere)
-  ![Deployed version](https://guarded-basin-44458.herokuapp.com/)
+  [CORS workaround](https://github.com/Metsanpeitto/cors-everywhere)
+  [Deployed version](https://guarded-basin-44458.herokuapp.com/)
   
 - We use Jest to test the counters of comments, items, reservations and likes.
 - The following Design System was created to serve as guideline: 
-  ![Figma design system](https://www.figma.com/file/xZwuAa1Fsl2Afi4tkqVWuo/Untitled?node-id=0%3A1)
+  [Figma design system](https://www.figma.com/file/xZwuAa1Fsl2Afi4tkqVWuo/Untitled?node-id=0%3A1)
 
 
 ![Microverse](https://img.shields.io/badge/Microverse-blueviolet)
