@@ -1,3 +1,5 @@
+![Microverse](https://img.shields.io/badge/Microverse-blueviolet)
+
 # JavaScript-capstone-project
 The JavaScript capstone project is about building our own web application based on an external API.  The webapp have 3 user interfaces:
 
@@ -15,9 +17,6 @@ The JavaScript capstone project is about building our own web application based 
 - We use Jest to test the counters of comments, items, reservations and likes.
 - The following Design System was created to serve as guideline: 
   [Figma design system](https://www.figma.com/file/xZwuAa1Fsl2Afi4tkqVWuo/Untitled?node-id=0%3A1)
-
-
-![Microverse](https://img.shields.io/badge/Microverse-blueviolet)
 
 
 =======
