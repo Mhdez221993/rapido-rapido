@@ -92,6 +92,7 @@
           z-index: 5;
 
           .stars-img {
+            cursor: pointer;
             align-self: end;
             margin-left: auto;
             margin-right: auto;
@@ -168,6 +169,7 @@
         }
 
         .item-reserve {
+          cursor: pointer;
           position: absolute;
           bottom: 0%;
           right: 0%;
@@ -176,6 +178,7 @@
         }
 
         .item-comments {
+          cursor: pointer;
           position: absolute;
           left: 0%;
           transform: scale(0.7);
@@ -224,7 +227,6 @@
     }
 
     .l-menu-main {
-      padding-top: 10px;
       align-content: center;
       transform: unset;
       padding-bottom: unset;
@@ -235,8 +237,8 @@
 
       .l-menu-main-group {
         grid-template-rows: auto auto;
-        height: 60vh;
-        width: 10vw;
+        min-height: 500px;
+        width: 250px;
         transform: unset;
 
         &:nth-child(1) {
