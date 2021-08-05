@@ -20,15 +20,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Metsanpeitto/microverse-capstone-2.git"
+    "url": "git+https://github.com/Mhdez221993/JavaScript-capstone-project.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Metsanpeitto/microverse-capstone-2/issues"
+    "url": "https://github.com/Mhdez221993/JavaScript-capstone-project/issues"
   },
-  "homepage": "https://github.com/Metsanpeitto/microverse-capstone-2",
+  "homepage": "https://github.com/Mhdez221993/JavaScript-capstone-project",
   "devDependencies": {
     "@babel/preset-env": "^7.14.9",
     "@testing-library/dom": "^8.1.0",
