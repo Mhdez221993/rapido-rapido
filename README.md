@@ -81,7 +81,7 @@ If you want a copy of this file go to the github repository and download it from
 
 ### Live
 
-[Live](https://mhdez221993.github.io/JavaScript-capstone-project//)
+[Live](https://mhdez221993.github.io/JavaScript-capstone-project/dist/)
 
 
 ### Setup
