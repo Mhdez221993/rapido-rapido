@@ -15,7 +15,7 @@
     "jest": "jest --watchAll * .js",
     "start": "webpack serve --open",
     "server": "node server.js",
-    "build": "webpack",
+    "build": "webpack --watch",
     "deploy": "gh-pages -d dist"
   },
   "repository": {
