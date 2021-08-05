@@ -31,6 +31,7 @@
       -webkit-text-stroke-width: 1px;
       -webkit-text-stroke-color: black;
     }
+
     &__counter {
       font-size: 12px;
       margin-top: 3%;
@@ -300,19 +301,13 @@
             position: absolute;
             bottom: 0%;
             z-index: 6;
+            transform: scale(1);
           }
 
           .item-comments {
             position: absolute;
             bottom: 0%;
             z-index: 6;
-          }
-
-          .item-comments {
-            transform: scale(1);
-          }
-
-          .item-reserve {
             transform: scale(1);
           }
 

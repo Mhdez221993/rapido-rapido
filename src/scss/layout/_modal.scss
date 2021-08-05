@@ -61,10 +61,10 @@
 
     .new-comment-warning {
       display: block;
-    color: white;
-    font-size: 18px;
-    text-align: center;
-    margin-top: 5%;
+      color: white;
+      font-size: 18px;
+      text-align: center;
+      margin-top: 5%;
     }
   }
 
@@ -211,6 +211,7 @@
         color: red;
         display: none;
       }
+
       .new-comment-warning {
         color: red;
         display: none;

@@ -29,7 +29,7 @@ const modalReserveLayout = (item) => {
         <section class="modal-list">
 
         ${item.reservations.map((i) => {
-          const reservation = `<div class="modal-list-item">
+    const reservation = `<div class="modal-list-item">
             <h5>${i.date_start}</h5
             -
             <h5>${i.date_end}</h5>
@@ -37,8 +37,8 @@ const modalReserveLayout = (item) => {
             <h5>${i.username}</h5>
           </div>
         `;
-          return reservation;
-        })}
+    return reservation;
+  })}
 
         </section>
         <section class="new">
