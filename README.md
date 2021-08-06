@@ -73,7 +73,10 @@ We have counters in all the interfaces that show:
 - The number of comments (comments popup).
 - The number of reservations (reservations popup) - only for the groups of 3 students.
 
+##  Presentation Video
 
+- [Video](https://github.com/Mhdez221993/JavaScript-capstone-project/dist)
+https://drive.google.com/file/d/1SAe-UNYojLr0PF9BP32spJag1LUA6pGx/view?usp=sharing)
 
 
 ## Getting Started
