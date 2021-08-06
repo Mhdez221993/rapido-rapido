@@ -140,9 +140,9 @@ function displayReserve(item) {
 
     const submitBtn = document.getElementById('btn-reserve-new');
     submitBtn.addEventListener('click', () => {
-      const dateStart = document.getElementById('reserve-date-start');
-      const dateEnd = document.getElementById('reserve-date-end');
-      const name = document.getElementById('reserve-name');
+      const dateStart = document.getElementById('reserve-date-start').value;
+      const dateEnd = document.getElementById('reserve-date-end').value;
+      const name = document.getElementById('reserve-name').value;
 
       const isValidDateStart = Date.parse(dateStart);
       const isValidDateEnd = Date.parse(dateEnd);
@@ -162,9 +162,9 @@ function displayReserve(item) {
       if (isValidDateEnd && isValidDateStart && isValidName) {
         const data = {
           item_id: item.name,
-          username: name.value,
-          date_start: dateStart.value,
-          date_end: dateEnd.value,
+          username: name,
+          date_start: dateStart,
+          date_end: dateEnd,
         };
 
         postReservation(data).then((response) => {

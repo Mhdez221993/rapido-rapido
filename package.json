@@ -28,7 +28,7 @@
   "bugs": {
     "url": "https://github.com/Mhdez221993/JavaScript-capstone-project/issues"
   },
-  "homepage": "https://github.com/Mhdez221993/JavaScript-capstone-project",
+  "homepage": "https://github.com/Mhdez221993/JavaScript-capstone-project/",
   "devDependencies": {
     "@babel/preset-env": "^7.14.9",
     "@testing-library/dom": "^8.1.0",
@@ -40,6 +40,7 @@
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-plugin-import": "^2.23.4",
     "express": "^4.17.1",
+    "gh-pages": "^3.2.3",
     "hint": "^6.1.4",
     "html-webpack-plugin": "^5.3.2",
     "sass": "^1.35.2",
@@ -60,7 +61,6 @@
     "axios": "^0.21.1",
     "cors": "^2.8.5",
     "cors-proxy": "^1.0.3",
-    "gh-pages": "^3.2.3",
     "gh-pages-webpack-plugin": "^1.0.2",
     "jest": "^27.0.6",
     "jsdom": "^16.6.0",
