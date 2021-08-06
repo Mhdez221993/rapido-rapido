@@ -128,7 +128,6 @@ npm run jest
 ```
 
 
-
 If you are non a technical person you can download the zip file.
 
 - To do that you have to go to the green button that says 'Code' and then press on it.
