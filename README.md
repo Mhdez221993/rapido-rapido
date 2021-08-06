@@ -75,8 +75,8 @@ We have counters in all the interfaces that show:
 
 ##  Presentation Video
 
-- [Video](https://github.com/Mhdez221993/JavaScript-capstone-project/dist)
-https://drive.google.com/file/d/1SAe-UNYojLr0PF9BP32spJag1LUA6pGx/view?usp=sharing)
+- [Video](https://drive.google.com/file/d/1SAe-UNYojLr0PF9BP32spJag1LUA6pGx/view?usp=sharing)
+
 
 
 ## Getting Started
