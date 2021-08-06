@@ -1,0 +1,74 @@
+{
+  "name": "microverse-capstone-2",
+  "version": "1.0.0",
+  "description": "![Alt text](screenshot.png?raw=true 'Screenshot')",
+  "private": true,
+  "jest": {
+    "resetMocks": false,
+    "automock": false,
+    "setupFiles": [
+      "./src/tests/test_files/index.js"
+    ]
+  },
+  "scripts": {
+    "test": "jest --watchAll",
+    "jest": "jest --watchAll * .js",
+    "start": "webpack serve --open",
+    "server": "node server.js",
+    "build": "webpack --watch",
+    "deploy": "gh-pages -d dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mhdez221993/JavaScript-capstone-project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mhdez221993/JavaScript-capstone-project/issues"
+  },
+  "homepage": "https://github.com/Mhdez221993/JavaScript-capstone-project/",
+  "devDependencies": {
+    "@babel/preset-env": "^7.14.9",
+    "@testing-library/dom": "^8.1.0",
+    "@testing-library/jest-dom": "^5.14.1",
+    "babel-eslint": "^10.1.0",
+    "cors-proxy-webpack-plugin": "0.0.5",
+    "css-loader": "^5.2.6",
+    "eslint": "^7.31.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.23.4",
+    "express": "^4.17.1",
+    "gh-pages": "^3.2.3",
+    "hint": "^6.1.4",
+    "html-webpack-plugin": "^5.3.2",
+    "sass": "^1.35.2",
+    "sass-loader": "^12.1.0",
+    "stylelint": "^13.13.1",
+    "stylelint-config-standard": "^21.0.0",
+    "stylelint-csstree-validator": "^1.9.0",
+    "stylelint-scss": "^3.20.1",
+    "webpack": "^5.45.1",
+    "webpack-cli": "^4.7.2",
+    "webpack-dev-middleware": "^5.0.0",
+    "webpack-dev-server": "^3.11.2",
+    "webpack-log": "^3.0.2",
+    "webpack-manifest-plugin": "^3.1.1",
+    "webpack-nano": "^1.1.1"
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "cors": "^2.8.5",
+    "cors-proxy": "^1.0.3",
+    "gh-pages-webpack-plugin": "^1.0.2",
+    "jest": "^27.0.6",
+    "jsdom": "^16.6.0",
+    "local-cors-proxy": "^1.1.0",
+    "lodash": "^4.17.21",
+    "node-sass": "^6.0.1",
+    "regenerator-runtime": "^0.13.9",
+    "style-loader": "^3.0.0"
+  },
+  "main": "server.js"
+}

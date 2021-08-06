@@ -1,0 +1,38 @@
+/**
+* buttons.scss
+*
+* Buttons, whatever their purpose, are important design elements.
+* They could be the end point of a Web form or a call to action.
+* Designers have many reasons to style buttons, including to make
+* them more attractive and to enhance usability.
+*
+* - Use white color to transmit trust.
+* - Use black color to transmit being elegant, formal, slick or modern.
+* - Use blue color to transmit stability and confidence.
+* - Use rounded corners, they are easier on the eyes.
+*
+*/
+
+/*  Component Buttons  */
+
+button {
+  background-color: white;
+  border-color: black;
+  border-style: solid;
+  appearance: none;
+  color: black;
+  font-family: "Indie Flower", sans-serif !important;
+
+  &:active {
+    transform: scale(0.8);
+  }
+}
+
+.btn-1 {
+  border-radius: 12px;
+  border: unset;
+}
+
+.cancel {
+  background-color: $color-red-bright !important;
+}
